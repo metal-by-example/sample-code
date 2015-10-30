@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		839E18D51BE348B800944528 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18D41BE348B800944528 /* main.m */; };
+		839E18D81BE348B800944528 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18D71BE348B800944528 /* AppDelegate.m */; };
+		839E18DB1BE348B800944528 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18DA1BE348B800944528 /* ViewController.m */; };
+		839E18DE1BE348B800944528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839E18DC1BE348B800944528 /* Main.storyboard */; };
+		839E18E01BE348B800944528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839E18DF1BE348B800944528 /* Assets.xcassets */; };
+		839E18E31BE348B800944528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839E18E11BE348B800944528 /* LaunchScreen.storyboard */; };
+		839E18F91BE3495400944528 /* MBEMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18EB1BE3495400944528 /* MBEMathUtilities.m */; };
+		839E18FA1BE3495400944528 /* MBEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18ED1BE3495400944528 /* MBEMesh.m */; };
+		839E18FB1BE3495400944528 /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18EF1BE3495400944528 /* MBEMetalView.m */; };
+		839E18FC1BE3495400944528 /* MBEOBJGroup.mm in Sources */ = {isa = PBXBuildFile; fileRef = 839E18F11BE3495400944528 /* MBEOBJGroup.mm */; };
+		839E18FD1BE3495400944528 /* MBEOBJMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18F31BE3495400944528 /* MBEOBJMesh.m */; };
+		839E18FE1BE3495400944528 /* MBEOBJModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 839E18F51BE3495400944528 /* MBEOBJModel.mm */; };
+		839E18FF1BE3495400944528 /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18F71BE3495400944528 /* MBERenderer.m */; };
+		839E19021BE3497A00944528 /* MBEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E19011BE3497A00944528 /* MBEMaterial.m */; };
+		839E190C1BE349AD00944528 /* moo.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 839E19041BE349AC00944528 /* moo.aiff */; };
+		839E190D1BE349AD00944528 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 839E19051BE349AC00944528 /* README.txt */; };
+		839E190E1BE349AD00944528 /* spot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 839E19061BE349AC00944528 /* spot.obj */; };
+		839E19111BE349AD00944528 /* spot_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E19091BE349AD00944528 /* spot_texture.png */; };
+		839E19191BE3583B00944528 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 839E19181BE3583B00944528 /* Shaders.metal */; };
+		839E191C1BE3596D00944528 /* MBETextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E191B1BE3596D00944528 /* MBETextureLoader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		839E18D01BE348B800944528 /* Texturing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Texturing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		839E18D41BE348B800944528 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		839E18D61BE348B800944528 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		839E18D71BE348B800944528 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		839E18D91BE348B800944528 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		839E18DA1BE348B800944528 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		839E18DD1BE348B800944528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		839E18DF1BE348B800944528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		839E18E21BE348B800944528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		839E18E41BE348B800944528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839E18EA1BE3495400944528 /* MBEMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMathUtilities.h; sourceTree = "<group>"; };
+		839E18EB1BE3495400944528 /* MBEMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMathUtilities.m; sourceTree = "<group>"; };
+		839E18EC1BE3495400944528 /* MBEMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMesh.h; sourceTree = "<group>"; };
+		839E18ED1BE3495400944528 /* MBEMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMesh.m; sourceTree = "<group>"; };
+		839E18EE1BE3495400944528 /* MBEMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalView.h; sourceTree = "<group>"; };
+		839E18EF1BE3495400944528 /* MBEMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalView.m; sourceTree = "<group>"; };
+		839E18F01BE3495400944528 /* MBEOBJGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEOBJGroup.h; sourceTree = "<group>"; };
+		839E18F11BE3495400944528 /* MBEOBJGroup.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MBEOBJGroup.mm; sourceTree = "<group>"; };
+		839E18F21BE3495400944528 /* MBEOBJMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEOBJMesh.h; sourceTree = "<group>"; };
+		839E18F31BE3495400944528 /* MBEOBJMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEOBJMesh.m; sourceTree = "<group>"; };
+		839E18F41BE3495400944528 /* MBEOBJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEOBJModel.h; sourceTree = "<group>"; };
+		839E18F51BE3495400944528 /* MBEOBJModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MBEOBJModel.mm; sourceTree = "<group>"; };
+		839E18F61BE3495400944528 /* MBERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBERenderer.h; sourceTree = "<group>"; };
+		839E18F71BE3495400944528 /* MBERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBERenderer.m; sourceTree = "<group>"; };
+		839E18F81BE3495400944528 /* MBETypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBETypes.h; sourceTree = "<group>"; };
+		839E19001BE3497A00944528 /* MBEMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMaterial.h; sourceTree = "<group>"; };
+		839E19011BE3497A00944528 /* MBEMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMaterial.m; sourceTree = "<group>"; };
+		839E19041BE349AC00944528 /* moo.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = moo.aiff; sourceTree = "<group>"; };
+		839E19051BE349AC00944528 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		839E19061BE349AC00944528 /* spot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot.obj; sourceTree = "<group>"; };
+		839E19071BE349AC00944528 /* spot_control_mesh.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot_control_mesh.obj; sourceTree = "<group>"; };
+		839E19081BE349AD00944528 /* spot_quadrangulated.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot_quadrangulated.obj; sourceTree = "<group>"; };
+		839E19091BE349AD00944528 /* spot_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spot_texture.png; sourceTree = "<group>"; };
+		839E190A1BE349AD00944528 /* spot_texture.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = spot_texture.svg; sourceTree = "<group>"; };
+		839E190B1BE349AD00944528 /* spot_triangulated.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot_triangulated.obj; sourceTree = "<group>"; };
+		839E19181BE3583B00944528 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		839E191A1BE3596D00944528 /* MBETextureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBETextureLoader.h; sourceTree = "<group>"; };
+		839E191B1BE3596D00944528 /* MBETextureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBETextureLoader.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		839E18CD1BE348B800944528 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		839E18C71BE348B800944528 = {
+			isa = PBXGroup;
+			children = (
+				839E18D21BE348B800944528 /* Texturing */,
+				839E18D11BE348B800944528 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		839E18D11BE348B800944528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				839E18D01BE348B800944528 /* Texturing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		839E18D21BE348B800944528 /* Texturing */ = {
+			isa = PBXGroup;
+			children = (
+				839E19031BE349AC00944528 /* spot */,
+				839E18EA1BE3495400944528 /* MBEMathUtilities.h */,
+				839E18EB1BE3495400944528 /* MBEMathUtilities.m */,
+				839E19001BE3497A00944528 /* MBEMaterial.h */,
+				839E19011BE3497A00944528 /* MBEMaterial.m */,
+				839E18EC1BE3495400944528 /* MBEMesh.h */,
+				839E18ED1BE3495400944528 /* MBEMesh.m */,
+				839E18EE1BE3495400944528 /* MBEMetalView.h */,
+				839E18EF1BE3495400944528 /* MBEMetalView.m */,
+				839E191A1BE3596D00944528 /* MBETextureLoader.h */,
+				839E191B1BE3596D00944528 /* MBETextureLoader.m */,
+				839E18F01BE3495400944528 /* MBEOBJGroup.h */,
+				839E18F11BE3495400944528 /* MBEOBJGroup.mm */,
+				839E18F21BE3495400944528 /* MBEOBJMesh.h */,
+				839E18F31BE3495400944528 /* MBEOBJMesh.m */,
+				839E18F41BE3495400944528 /* MBEOBJModel.h */,
+				839E18F51BE3495400944528 /* MBEOBJModel.mm */,
+				839E18F61BE3495400944528 /* MBERenderer.h */,
+				839E18F71BE3495400944528 /* MBERenderer.m */,
+				839E18F81BE3495400944528 /* MBETypes.h */,
+				839E18D61BE348B800944528 /* AppDelegate.h */,
+				839E18D71BE348B800944528 /* AppDelegate.m */,
+				839E18D91BE348B800944528 /* ViewController.h */,
+				839E18DA1BE348B800944528 /* ViewController.m */,
+				839E19181BE3583B00944528 /* Shaders.metal */,
+				839E18DC1BE348B800944528 /* Main.storyboard */,
+				839E18DF1BE348B800944528 /* Assets.xcassets */,
+				839E18E11BE348B800944528 /* LaunchScreen.storyboard */,
+				839E18E41BE348B800944528 /* Info.plist */,
+				839E18D31BE348B800944528 /* Supporting Files */,
+			);
+			path = Texturing;
+			sourceTree = "<group>";
+		};
+		839E18D31BE348B800944528 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				839E18D41BE348B800944528 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		839E19031BE349AC00944528 /* spot */ = {
+			isa = PBXGroup;
+			children = (
+				839E19041BE349AC00944528 /* moo.aiff */,
+				839E19051BE349AC00944528 /* README.txt */,
+				839E19061BE349AC00944528 /* spot.obj */,
+				839E19071BE349AC00944528 /* spot_control_mesh.obj */,
+				839E19081BE349AD00944528 /* spot_quadrangulated.obj */,
+				839E19091BE349AD00944528 /* spot_texture.png */,
+				839E190A1BE349AD00944528 /* spot_texture.svg */,
+				839E190B1BE349AD00944528 /* spot_triangulated.obj */,
+			);
+			path = spot;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		839E18CF1BE348B800944528 /* Texturing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839E18E71BE348B800944528 /* Build configuration list for PBXNativeTarget "Texturing" */;
+			buildPhases = (
+				839E18CC1BE348B800944528 /* Sources */,
+				839E18CD1BE348B800944528 /* Frameworks */,
+				839E18CE1BE348B800944528 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Texturing;
+			productName = Texturing;
+			productReference = 839E18D01BE348B800944528 /* Texturing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		839E18C81BE348B800944528 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Metal by Example";
+				TargetAttributes = {
+					839E18CF1BE348B800944528 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 839E18CB1BE348B800944528 /* Build configuration list for PBXProject "Texturing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 839E18C71BE348B800944528;
+			productRefGroup = 839E18D11BE348B800944528 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				839E18CF1BE348B800944528 /* Texturing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		839E18CE1BE348B800944528 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839E18E31BE348B800944528 /* LaunchScreen.storyboard in Resources */,
+				839E18E01BE348B800944528 /* Assets.xcassets in Resources */,
+				839E18DE1BE348B800944528 /* Main.storyboard in Resources */,
+				839E190E1BE349AD00944528 /* spot.obj in Resources */,
+				839E190C1BE349AD00944528 /* moo.aiff in Resources */,
+				839E19111BE349AD00944528 /* spot_texture.png in Resources */,
+				839E190D1BE349AD00944528 /* README.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		839E18CC1BE348B800944528 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839E19191BE3583B00944528 /* Shaders.metal in Sources */,
+				839E18DB1BE348B800944528 /* ViewController.m in Sources */,
+				839E18FC1BE3495400944528 /* MBEOBJGroup.mm in Sources */,
+				839E19021BE3497A00944528 /* MBEMaterial.m in Sources */,
+				839E18FB1BE3495400944528 /* MBEMetalView.m in Sources */,
+				839E18FE1BE3495400944528 /* MBEOBJModel.mm in Sources */,
+				839E18FD1BE3495400944528 /* MBEOBJMesh.m in Sources */,
+				839E191C1BE3596D00944528 /* MBETextureLoader.m in Sources */,
+				839E18D81BE348B800944528 /* AppDelegate.m in Sources */,
+				839E18D51BE348B800944528 /* main.m in Sources */,
+				839E18F91BE3495400944528 /* MBEMathUtilities.m in Sources */,
+				839E18FF1BE3495400944528 /* MBERenderer.m in Sources */,
+				839E18FA1BE3495400944528 /* MBEMesh.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		839E18DC1BE348B800944528 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				839E18DD1BE348B800944528 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		839E18E11BE348B800944528 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				839E18E21BE348B800944528 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		839E18E51BE348B800944528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		839E18E61BE348B800944528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		839E18E81BE348B800944528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Texturing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.metalbyexample.Texturing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		839E18E91BE348B800944528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Texturing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.metalbyexample.Texturing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		839E18CB1BE348B800944528 /* Build configuration list for PBXProject "Texturing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839E18E51BE348B800944528 /* Debug */,
+				839E18E61BE348B800944528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		839E18E71BE348B800944528 /* Build configuration list for PBXNativeTarget "Texturing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839E18E81BE348B800944528 /* Debug */,
+				839E18E91BE348B800944528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 839E18C81BE348B800944528 /* Project object */;
+}

@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		832493201A113520001E2340 /* MBETorusKnotMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 8324931F1A113520001E2340 /* MBETorusKnotMesh.m */; };
+		832493231A116424001E2340 /* MBEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 832493221A116424001E2340 /* MBEMesh.m */; };
+		832493261A1196B7001E2340 /* MBEMatrixUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 832493251A1196B7001E2340 /* MBEMatrixUtilities.m */; };
+		834B3CD61A0F1628009646DA /* MBESkyboxMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 834B3CD51A0F1628009646DA /* MBESkyboxMesh.m */; };
+		8362D1A71A0D5BEB00A6D9A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1A61A0D5BEB00A6D9A8 /* main.m */; };
+		8362D1AA1A0D5BEB00A6D9A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1A91A0D5BEB00A6D9A8 /* AppDelegate.m */; };
+		8362D1AD1A0D5BEB00A6D9A8 /* MBEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1AC1A0D5BEB00A6D9A8 /* MBEViewController.m */; };
+		8362D1B01A0D5BEB00A6D9A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1AE1A0D5BEB00A6D9A8 /* Main.storyboard */; };
+		8362D1B21A0D5BEB00A6D9A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1B11A0D5BEB00A6D9A8 /* Images.xcassets */; };
+		8362D1B51A0D5BEB00A6D9A8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1B31A0D5BEB00A6D9A8 /* LaunchScreen.xib */; };
+		8362D1CC1A0D653900A6D9A8 /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1CB1A0D653900A6D9A8 /* MBEMetalView.m */; };
+		8362D1E21A0D6B6E00A6D9A8 /* nx.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1DC1A0D6B6E00A6D9A8 /* nx.png */; };
+		8362D1E31A0D6B6E00A6D9A8 /* ny.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1DD1A0D6B6E00A6D9A8 /* ny.png */; };
+		8362D1E41A0D6B6E00A6D9A8 /* nz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1DE1A0D6B6E00A6D9A8 /* nz.png */; };
+		8362D1E51A0D6B6E00A6D9A8 /* px.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1DF1A0D6B6E00A6D9A8 /* px.png */; };
+		8362D1E61A0D6B6E00A6D9A8 /* py.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1E01A0D6B6E00A6D9A8 /* py.png */; };
+		8362D1E71A0D6B6E00A6D9A8 /* pz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1E11A0D6B6E00A6D9A8 /* pz.png */; };
+		8362D1EA1A0D6BE500A6D9A8 /* MBETextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1E91A0D6BE500A6D9A8 /* MBETextureLoader.m */; };
+		8362D1ED1A0D735800A6D9A8 /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1EC1A0D735800A6D9A8 /* MBERenderer.m */; };
+		8362D1F11A0EA75F00A6D9A8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1F01A0EA75F00A6D9A8 /* Shaders.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8324931E1A113520001E2340 /* MBETorusKnotMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBETorusKnotMesh.h; sourceTree = "<group>"; };
+		8324931F1A113520001E2340 /* MBETorusKnotMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBETorusKnotMesh.m; sourceTree = "<group>"; };
+		832493211A116424001E2340 /* MBEMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMesh.h; sourceTree = "<group>"; };
+		832493221A116424001E2340 /* MBEMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMesh.m; sourceTree = "<group>"; };
+		832493241A1196B7001E2340 /* MBEMatrixUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMatrixUtilities.h; sourceTree = "<group>"; };
+		832493251A1196B7001E2340 /* MBEMatrixUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMatrixUtilities.m; sourceTree = "<group>"; };
+		832493271A119747001E2340 /* MBETypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBETypes.h; sourceTree = "<group>"; };
+		834B3CD41A0F1628009646DA /* MBESkyboxMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBESkyboxMesh.h; sourceTree = "<group>"; };
+		834B3CD51A0F1628009646DA /* MBESkyboxMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBESkyboxMesh.m; sourceTree = "<group>"; };
+		8362D1A11A0D5BEB00A6D9A8 /* CubeMapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeMapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8362D1A51A0D5BEB00A6D9A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8362D1A61A0D5BEB00A6D9A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8362D1A81A0D5BEB00A6D9A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8362D1A91A0D5BEB00A6D9A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8362D1AB1A0D5BEB00A6D9A8 /* MBEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEViewController.h; sourceTree = "<group>"; };
+		8362D1AC1A0D5BEB00A6D9A8 /* MBEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBEViewController.m; sourceTree = "<group>"; };
+		8362D1AF1A0D5BEB00A6D9A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8362D1B11A0D5BEB00A6D9A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8362D1B41A0D5BEB00A6D9A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8362D1CA1A0D653900A6D9A8 /* MBEMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalView.h; sourceTree = "<group>"; };
+		8362D1CB1A0D653900A6D9A8 /* MBEMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalView.m; sourceTree = "<group>"; };
+		8362D1DC1A0D6B6E00A6D9A8 /* nx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nx.png; sourceTree = "<group>"; };
+		8362D1DD1A0D6B6E00A6D9A8 /* ny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ny.png; sourceTree = "<group>"; };
+		8362D1DE1A0D6B6E00A6D9A8 /* nz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nz.png; sourceTree = "<group>"; };
+		8362D1DF1A0D6B6E00A6D9A8 /* px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = px.png; sourceTree = "<group>"; };
+		8362D1E01A0D6B6E00A6D9A8 /* py.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = py.png; sourceTree = "<group>"; };
+		8362D1E11A0D6B6E00A6D9A8 /* pz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pz.png; sourceTree = "<group>"; };
+		8362D1E81A0D6BE500A6D9A8 /* MBETextureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBETextureLoader.h; sourceTree = "<group>"; };
+		8362D1E91A0D6BE500A6D9A8 /* MBETextureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBETextureLoader.m; sourceTree = "<group>"; };
+		8362D1EB1A0D735800A6D9A8 /* MBERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBERenderer.h; sourceTree = "<group>"; };
+		8362D1EC1A0D735800A6D9A8 /* MBERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBERenderer.m; sourceTree = "<group>"; };
+		8362D1F01A0EA75F00A6D9A8 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8362D19E1A0D5BEB00A6D9A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8358FDC11A141C7600BF61A3 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				832493211A116424001E2340 /* MBEMesh.h */,
+				832493221A116424001E2340 /* MBEMesh.m */,
+				834B3CD41A0F1628009646DA /* MBESkyboxMesh.h */,
+				834B3CD51A0F1628009646DA /* MBESkyboxMesh.m */,
+				8324931E1A113520001E2340 /* MBETorusKnotMesh.h */,
+				8324931F1A113520001E2340 /* MBETorusKnotMesh.m */,
+			);
+			name = Geometry;
+			sourceTree = "<group>";
+		};
+		8362D1981A0D5BEB00A6D9A8 = {
+			isa = PBXGroup;
+			children = (
+				8362D1A31A0D5BEB00A6D9A8 /* CubeMapping */,
+				8362D1A21A0D5BEB00A6D9A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8362D1A21A0D5BEB00A6D9A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8362D1A11A0D5BEB00A6D9A8 /* CubeMapping.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8362D1A31A0D5BEB00A6D9A8 /* CubeMapping */ = {
+			isa = PBXGroup;
+			children = (
+				832493271A119747001E2340 /* MBETypes.h */,
+				8362D1CA1A0D653900A6D9A8 /* MBEMetalView.h */,
+				8362D1CB1A0D653900A6D9A8 /* MBEMetalView.m */,
+				8362D1AB1A0D5BEB00A6D9A8 /* MBEViewController.h */,
+				8362D1AC1A0D5BEB00A6D9A8 /* MBEViewController.m */,
+				8362D1EB1A0D735800A6D9A8 /* MBERenderer.h */,
+				8362D1EC1A0D735800A6D9A8 /* MBERenderer.m */,
+				8362D1F01A0EA75F00A6D9A8 /* Shaders.metal */,
+				83B878051A16AF0B00177592 /* Utilities */,
+				8358FDC11A141C7600BF61A3 /* Geometry */,
+				83B878061A16AF2700177592 /* User Interface */,
+				8362D1CD1A0D69BF00A6D9A8 /* Textures */,
+				8362D1A41A0D5BEB00A6D9A8 /* Supporting Files */,
+				8362D1B11A0D5BEB00A6D9A8 /* Images.xcassets */,
+			);
+			path = CubeMapping;
+			sourceTree = "<group>";
+		};
+		8362D1A41A0D5BEB00A6D9A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8362D1A81A0D5BEB00A6D9A8 /* AppDelegate.h */,
+				8362D1A91A0D5BEB00A6D9A8 /* AppDelegate.m */,
+				8362D1A51A0D5BEB00A6D9A8 /* Info.plist */,
+				8362D1A61A0D5BEB00A6D9A8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8362D1CD1A0D69BF00A6D9A8 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				8362D1DC1A0D6B6E00A6D9A8 /* nx.png */,
+				8362D1DD1A0D6B6E00A6D9A8 /* ny.png */,
+				8362D1DE1A0D6B6E00A6D9A8 /* nz.png */,
+				8362D1DF1A0D6B6E00A6D9A8 /* px.png */,
+				8362D1E01A0D6B6E00A6D9A8 /* py.png */,
+				8362D1E11A0D6B6E00A6D9A8 /* pz.png */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		83B878051A16AF0B00177592 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				832493241A1196B7001E2340 /* MBEMatrixUtilities.h */,
+				832493251A1196B7001E2340 /* MBEMatrixUtilities.m */,
+				8362D1E81A0D6BE500A6D9A8 /* MBETextureLoader.h */,
+				8362D1E91A0D6BE500A6D9A8 /* MBETextureLoader.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		83B878061A16AF2700177592 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				8362D1AE1A0D5BEB00A6D9A8 /* Main.storyboard */,
+				8362D1B31A0D5BEB00A6D9A8 /* LaunchScreen.xib */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8362D1A01A0D5BEB00A6D9A8 /* CubeMapping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8362D1C41A0D5BEB00A6D9A8 /* Build configuration list for PBXNativeTarget "CubeMapping" */;
+			buildPhases = (
+				8362D19D1A0D5BEB00A6D9A8 /* Sources */,
+				8362D19E1A0D5BEB00A6D9A8 /* Frameworks */,
+				8362D19F1A0D5BEB00A6D9A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CubeMapping;
+			productName = CubeMapping;
+			productReference = 8362D1A11A0D5BEB00A6D9A8 /* CubeMapping.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8362D1991A0D5BEB00A6D9A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Metal By Example";
+				TargetAttributes = {
+					8362D1A01A0D5BEB00A6D9A8 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 8362D19C1A0D5BEB00A6D9A8 /* Build configuration list for PBXProject "CubeMapping" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8362D1981A0D5BEB00A6D9A8;
+			productRefGroup = 8362D1A21A0D5BEB00A6D9A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8362D1A01A0D5BEB00A6D9A8 /* CubeMapping */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8362D19F1A0D5BEB00A6D9A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8362D1E21A0D6B6E00A6D9A8 /* nx.png in Resources */,
+				8362D1E51A0D6B6E00A6D9A8 /* px.png in Resources */,
+				8362D1B01A0D5BEB00A6D9A8 /* Main.storyboard in Resources */,
+				8362D1E31A0D6B6E00A6D9A8 /* ny.png in Resources */,
+				8362D1E61A0D6B6E00A6D9A8 /* py.png in Resources */,
+				8362D1E71A0D6B6E00A6D9A8 /* pz.png in Resources */,
+				8362D1B51A0D5BEB00A6D9A8 /* LaunchScreen.xib in Resources */,
+				8362D1E41A0D6B6E00A6D9A8 /* nz.png in Resources */,
+				8362D1B21A0D5BEB00A6D9A8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8362D19D1A0D5BEB00A6D9A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8362D1EA1A0D6BE500A6D9A8 /* MBETextureLoader.m in Sources */,
+				8362D1F11A0EA75F00A6D9A8 /* Shaders.metal in Sources */,
+				832493231A116424001E2340 /* MBEMesh.m in Sources */,
+				8362D1ED1A0D735800A6D9A8 /* MBERenderer.m in Sources */,
+				8362D1AD1A0D5BEB00A6D9A8 /* MBEViewController.m in Sources */,
+				832493261A1196B7001E2340 /* MBEMatrixUtilities.m in Sources */,
+				8362D1AA1A0D5BEB00A6D9A8 /* AppDelegate.m in Sources */,
+				8362D1A71A0D5BEB00A6D9A8 /* main.m in Sources */,
+				8362D1CC1A0D653900A6D9A8 /* MBEMetalView.m in Sources */,
+				834B3CD61A0F1628009646DA /* MBESkyboxMesh.m in Sources */,
+				832493201A113520001E2340 /* MBETorusKnotMesh.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8362D1AE1A0D5BEB00A6D9A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8362D1AF1A0D5BEB00A6D9A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8362D1B31A0D5BEB00A6D9A8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8362D1B41A0D5BEB00A6D9A8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8362D1C21A0D5BEB00A6D9A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8362D1C31A0D5BEB00A6D9A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8362D1C51A0D5BEB00A6D9A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CubeMapping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalbyexample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8362D1C61A0D5BEB00A6D9A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CubeMapping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalbyexample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8362D19C1A0D5BEB00A6D9A8 /* Build configuration list for PBXProject "CubeMapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8362D1C21A0D5BEB00A6D9A8 /* Debug */,
+				8362D1C31A0D5BEB00A6D9A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8362D1C41A0D5BEB00A6D9A8 /* Build configuration list for PBXNativeTarget "CubeMapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8362D1C51A0D5BEB00A6D9A8 /* Debug */,
+				8362D1C61A0D5BEB00A6D9A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8362D1991A0D5BEB00A6D9A8 /* Project object */;
+}

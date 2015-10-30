@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		833629C81A2A460700F66108 /* MBEMatrixUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 833629C51A2A460700F66108 /* MBEMatrixUtilities.m */; };
+		833629C91A2A460700F66108 /* MBEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 833629C71A2A460700F66108 /* MBEMesh.m */; };
+		833629CF1A2A46EC00F66108 /* MBETerrainMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 833629CE1A2A46EC00F66108 /* MBETerrainMesh.m */; };
+		838D31541A32392B004DFF7F /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 838D31531A32392B004DFF7F /* grass.png */; };
+		8399CC361A297351007A6659 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399CC301A297351007A6659 /* AppDelegate.m */; };
+		8399CC371A297351007A6659 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399CC311A297351007A6659 /* main.m */; };
+		8399CC381A297351007A6659 /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399CC331A297351007A6659 /* MBEMetalView.m */; };
+		8399CC391A297351007A6659 /* MBEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8399CC351A297351007A6659 /* MBEViewController.m */; };
+		83B489411A31256200198E6C /* MBETextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B489401A31256200198E6C /* MBETextureLoader.m */; };
+		83B489431A31269000198E6C /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83B489421A31269000198E6C /* Shaders.metal */; };
+		83B489491A312A0C00198E6C /* MBEOBJMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B489481A312A0C00198E6C /* MBEOBJMesh.m */; };
+		83BBA0001A2FB4AC0089DA6D /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BB9FFF1A2FB4AC0089DA6D /* MBERenderer.m */; };
+		83BBA01D1A2FB6C80089DA6D /* spot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 83BBA0151A2FB6C80089DA6D /* spot.obj */; };
+		83BBA0271A2FB6EE0089DA6D /* MBEOBJGroup.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83BBA0241A2FB6EE0089DA6D /* MBEOBJGroup.mm */; };
+		83BBA0281A2FB6EE0089DA6D /* MBEOBJModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83BBA0261A2FB6EE0089DA6D /* MBEOBJModel.mm */; };
+		83D59F9D1A297398003F4AAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D59F981A297398003F4AAB /* LaunchScreen.xib */; };
+		83D59F9E1A297398003F4AAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D59F9A1A297398003F4AAB /* Main.storyboard */; };
+		83D59F9F1A297398003F4AAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D59F9C1A297398003F4AAB /* Images.xcassets */; };
+		83F0FF0E1A3536EB000155FF /* spot.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F0FF0D1A3536EB000155FF /* spot.png */; };
+		83F0FF111A355310000155FF /* MBECow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F0FF101A355310000155FF /* MBECow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		833629C41A2A460700F66108 /* MBEMatrixUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBEMatrixUtilities.h; path = InstancedDrawing/MBEMatrixUtilities.h; sourceTree = SOURCE_ROOT; };
+		833629C51A2A460700F66108 /* MBEMatrixUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBEMatrixUtilities.m; path = InstancedDrawing/MBEMatrixUtilities.m; sourceTree = SOURCE_ROOT; };
+		833629C61A2A460700F66108 /* MBEMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBEMesh.h; path = InstancedDrawing/MBEMesh.h; sourceTree = SOURCE_ROOT; };
+		833629C71A2A460700F66108 /* MBEMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBEMesh.m; path = InstancedDrawing/MBEMesh.m; sourceTree = SOURCE_ROOT; };
+		833629CD1A2A46EC00F66108 /* MBETerrainMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBETerrainMesh.h; path = InstancedDrawing/MBETerrainMesh.h; sourceTree = SOURCE_ROOT; };
+		833629CE1A2A46EC00F66108 /* MBETerrainMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MBETerrainMesh.m; path = InstancedDrawing/MBETerrainMesh.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		833629D11A2A4AAE00F66108 /* MBETypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = MBETypes.h; path = InstancedDrawing/MBETypes.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		837F23051A2970BD006B7896 /* InstancedDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstancedDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		838D31511A3236BD004DFF7F /* CREDITS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CREDITS; path = InstancedDrawing/textures/CREDITS; sourceTree = SOURCE_ROOT; };
+		838D31531A32392B004DFF7F /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grass.png; path = InstancedDrawing/textures/grass.png; sourceTree = SOURCE_ROOT; };
+		8399CC2F1A297351007A6659 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = InstancedDrawing/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		8399CC301A297351007A6659 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = InstancedDrawing/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		8399CC311A297351007A6659 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = InstancedDrawing/main.m; sourceTree = SOURCE_ROOT; };
+		8399CC321A297351007A6659 /* MBEMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBEMetalView.h; path = InstancedDrawing/MBEMetalView.h; sourceTree = SOURCE_ROOT; };
+		8399CC331A297351007A6659 /* MBEMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBEMetalView.m; path = InstancedDrawing/MBEMetalView.m; sourceTree = SOURCE_ROOT; };
+		8399CC341A297351007A6659 /* MBEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBEViewController.h; path = InstancedDrawing/MBEViewController.h; sourceTree = SOURCE_ROOT; };
+		8399CC351A297351007A6659 /* MBEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBEViewController.m; path = InstancedDrawing/MBEViewController.m; sourceTree = SOURCE_ROOT; };
+		8399CC3A1A29735C007A6659 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = InstancedDrawing/Info.plist; sourceTree = SOURCE_ROOT; };
+		83B4893F1A31256200198E6C /* MBETextureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBETextureLoader.h; path = InstancedDrawing/MBETextureLoader.h; sourceTree = SOURCE_ROOT; };
+		83B489401A31256200198E6C /* MBETextureLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBETextureLoader.m; path = InstancedDrawing/MBETextureLoader.m; sourceTree = SOURCE_ROOT; };
+		83B489421A31269000198E6C /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = Shaders.metal; path = InstancedDrawing/Shaders.metal; sourceTree = SOURCE_ROOT; };
+		83B489471A312A0C00198E6C /* MBEOBJMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBEOBJMesh.h; path = InstancedDrawing/MBEOBJMesh.h; sourceTree = SOURCE_ROOT; };
+		83B489481A312A0C00198E6C /* MBEOBJMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBEOBJMesh.m; path = InstancedDrawing/MBEOBJMesh.m; sourceTree = SOURCE_ROOT; };
+		83BB9FFE1A2FB4AC0089DA6D /* MBERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBERenderer.h; path = InstancedDrawing/MBERenderer.h; sourceTree = SOURCE_ROOT; };
+		83BB9FFF1A2FB4AC0089DA6D /* MBERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBERenderer.m; path = InstancedDrawing/MBERenderer.m; sourceTree = SOURCE_ROOT; };
+		83BBA0141A2FB6C80089DA6D /* CREDITS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
+		83BBA0151A2FB6C80089DA6D /* spot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spot.obj; sourceTree = "<group>"; };
+		83BBA0231A2FB6EE0089DA6D /* MBEOBJGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBEOBJGroup.h; path = InstancedDrawing/MBEOBJGroup.h; sourceTree = SOURCE_ROOT; };
+		83BBA0241A2FB6EE0089DA6D /* MBEOBJGroup.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MBEOBJGroup.mm; path = InstancedDrawing/MBEOBJGroup.mm; sourceTree = SOURCE_ROOT; };
+		83BBA0251A2FB6EE0089DA6D /* MBEOBJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBEOBJModel.h; path = InstancedDrawing/MBEOBJModel.h; sourceTree = SOURCE_ROOT; };
+		83BBA0261A2FB6EE0089DA6D /* MBEOBJModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; name = MBEOBJModel.mm; path = InstancedDrawing/MBEOBJModel.mm; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		83D59F991A297398003F4AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = InstancedDrawing/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		83D59F9B1A297398003F4AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = InstancedDrawing/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		83D59F9C1A297398003F4AAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = InstancedDrawing/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		83F0FF0D1A3536EB000155FF /* spot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spot.png; sourceTree = "<group>"; };
+		83F0FF0F1A355310000155FF /* MBECow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBECow.h; path = InstancedDrawing/MBECow.h; sourceTree = SOURCE_ROOT; };
+		83F0FF101A355310000155FF /* MBECow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBECow.m; path = InstancedDrawing/MBECow.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		837F23021A2970BD006B7896 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		837F22FC1A2970BD006B7896 = {
+			isa = PBXGroup;
+			children = (
+				837F23071A2970BD006B7896 /* InstancedDrawing */,
+				837F23061A2970BD006B7896 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		837F23061A2970BD006B7896 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				837F23051A2970BD006B7896 /* InstancedDrawing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		837F23071A2970BD006B7896 /* InstancedDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				838D314E1A315A61004DFF7F /* User Interface */,
+				838D314D1A315A42004DFF7F /* Geometry */,
+				838D314F1A315A84004DFF7F /* OBJ */,
+				838D31501A315AD4004DFF7F /* Utilities */,
+				83F0FF0F1A355310000155FF /* MBECow.h */,
+				83F0FF101A355310000155FF /* MBECow.m */,
+				83BB9FFE1A2FB4AC0089DA6D /* MBERenderer.h */,
+				83BB9FFF1A2FB4AC0089DA6D /* MBERenderer.m */,
+				83B489421A31269000198E6C /* Shaders.metal */,
+				83D59F981A297398003F4AAB /* LaunchScreen.xib */,
+				83D59F9A1A297398003F4AAB /* Main.storyboard */,
+				83D59F9C1A297398003F4AAB /* Images.xcassets */,
+				83B489441A3126A000198E6C /* textures */,
+				83BBA0121A2FB6C80089DA6D /* spot */,
+				837F23081A2970BD006B7896 /* Supporting Files */,
+			);
+			name = InstancedDrawing;
+			path = MetalInstancedDrawing;
+			sourceTree = "<group>";
+		};
+		837F23081A2970BD006B7896 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8399CC3A1A29735C007A6659 /* Info.plist */,
+				8399CC311A297351007A6659 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		838D314D1A315A42004DFF7F /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				833629C61A2A460700F66108 /* MBEMesh.h */,
+				833629C71A2A460700F66108 /* MBEMesh.m */,
+				833629CD1A2A46EC00F66108 /* MBETerrainMesh.h */,
+				833629CE1A2A46EC00F66108 /* MBETerrainMesh.m */,
+			);
+			name = Geometry;
+			sourceTree = "<group>";
+		};
+		838D314E1A315A61004DFF7F /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				8399CC2F1A297351007A6659 /* AppDelegate.h */,
+				8399CC301A297351007A6659 /* AppDelegate.m */,
+				8399CC321A297351007A6659 /* MBEMetalView.h */,
+				8399CC331A297351007A6659 /* MBEMetalView.m */,
+				8399CC341A297351007A6659 /* MBEViewController.h */,
+				8399CC351A297351007A6659 /* MBEViewController.m */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		838D314F1A315A84004DFF7F /* OBJ */ = {
+			isa = PBXGroup;
+			children = (
+				83BBA0231A2FB6EE0089DA6D /* MBEOBJGroup.h */,
+				83BBA0241A2FB6EE0089DA6D /* MBEOBJGroup.mm */,
+				83B489471A312A0C00198E6C /* MBEOBJMesh.h */,
+				83B489481A312A0C00198E6C /* MBEOBJMesh.m */,
+				83BBA0251A2FB6EE0089DA6D /* MBEOBJModel.h */,
+				83BBA0261A2FB6EE0089DA6D /* MBEOBJModel.mm */,
+			);
+			name = OBJ;
+			sourceTree = "<group>";
+		};
+		838D31501A315AD4004DFF7F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				83B4893F1A31256200198E6C /* MBETextureLoader.h */,
+				83B489401A31256200198E6C /* MBETextureLoader.m */,
+				833629C41A2A460700F66108 /* MBEMatrixUtilities.h */,
+				833629C51A2A460700F66108 /* MBEMatrixUtilities.m */,
+				833629D11A2A4AAE00F66108 /* MBETypes.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		83B489441A3126A000198E6C /* textures */ = {
+			isa = PBXGroup;
+			children = (
+				838D31531A32392B004DFF7F /* grass.png */,
+				838D31511A3236BD004DFF7F /* CREDITS */,
+			);
+			name = textures;
+			sourceTree = "<group>";
+		};
+		83BBA0121A2FB6C80089DA6D /* spot */ = {
+			isa = PBXGroup;
+			children = (
+				83F0FF0D1A3536EB000155FF /* spot.png */,
+				83BBA0141A2FB6C80089DA6D /* CREDITS */,
+				83BBA0151A2FB6C80089DA6D /* spot.obj */,
+			);
+			name = spot;
+			path = InstancedDrawing/spot;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		837F23041A2970BD006B7896 /* InstancedDrawing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837F23281A2970BD006B7896 /* Build configuration list for PBXNativeTarget "InstancedDrawing" */;
+			buildPhases = (
+				837F23011A2970BD006B7896 /* Sources */,
+				837F23021A2970BD006B7896 /* Frameworks */,
+				837F23031A2970BD006B7896 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstancedDrawing;
+			productName = MetalInstancedDrawing;
+			productReference = 837F23051A2970BD006B7896 /* InstancedDrawing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		837F22FD1A2970BD006B7896 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Metal By Example";
+				TargetAttributes = {
+					837F23041A2970BD006B7896 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 837F23001A2970BD006B7896 /* Build configuration list for PBXProject "InstancedDrawing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 837F22FC1A2970BD006B7896;
+			productRefGroup = 837F23061A2970BD006B7896 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				837F23041A2970BD006B7896 /* InstancedDrawing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		837F23031A2970BD006B7896 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83D59F9E1A297398003F4AAB /* Main.storyboard in Resources */,
+				838D31541A32392B004DFF7F /* grass.png in Resources */,
+				83F0FF0E1A3536EB000155FF /* spot.png in Resources */,
+				83D59F9F1A297398003F4AAB /* Images.xcassets in Resources */,
+				83D59F9D1A297398003F4AAB /* LaunchScreen.xib in Resources */,
+				83BBA01D1A2FB6C80089DA6D /* spot.obj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		837F23011A2970BD006B7896 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B489431A31269000198E6C /* Shaders.metal in Sources */,
+				833629C81A2A460700F66108 /* MBEMatrixUtilities.m in Sources */,
+				833629CF1A2A46EC00F66108 /* MBETerrainMesh.m in Sources */,
+				8399CC391A297351007A6659 /* MBEViewController.m in Sources */,
+				83BBA0001A2FB4AC0089DA6D /* MBERenderer.m in Sources */,
+				83BBA0281A2FB6EE0089DA6D /* MBEOBJModel.mm in Sources */,
+				83B489491A312A0C00198E6C /* MBEOBJMesh.m in Sources */,
+				8399CC381A297351007A6659 /* MBEMetalView.m in Sources */,
+				83B489411A31256200198E6C /* MBETextureLoader.m in Sources */,
+				83BBA0271A2FB6EE0089DA6D /* MBEOBJGroup.mm in Sources */,
+				8399CC371A297351007A6659 /* main.m in Sources */,
+				833629C91A2A460700F66108 /* MBEMesh.m in Sources */,
+				83F0FF111A355310000155FF /* MBECow.m in Sources */,
+				8399CC361A297351007A6659 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83D59F981A297398003F4AAB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D59F991A297398003F4AAB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		83D59F9A1A297398003F4AAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D59F9B1A297398003F4AAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		837F23261A2970BD006B7896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		837F23271A2970BD006B7896 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		837F23291A2970BD006B7896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/InstancedDrawing/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalbyexample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = InstancedDrawing;
+			};
+			name = Debug;
+		};
+		837F232A1A2970BD006B7896 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/InstancedDrawing/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalbyexample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = InstancedDrawing;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		837F23001A2970BD006B7896 /* Build configuration list for PBXProject "InstancedDrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837F23261A2970BD006B7896 /* Debug */,
+				837F23271A2970BD006B7896 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		837F23281A2970BD006B7896 /* Build configuration list for PBXNativeTarget "InstancedDrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837F23291A2970BD006B7896 /* Debug */,
+				837F232A1A2970BD006B7896 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 837F22FD1A2970BD006B7896 /* Project object */;
+}

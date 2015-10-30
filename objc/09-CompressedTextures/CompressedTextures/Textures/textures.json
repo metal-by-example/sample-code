@@ -1,0 +1,26 @@
+[
+    {
+        "label":"PNG",
+        "filename":"hotair.png",
+    },
+    {
+        "label":"PVRTC (2-bpp)",
+        "filename":"hotair.2bpp.pvr",
+    },
+    {
+        "label":"PVRTC (4-bpp)",
+        "filename":"hotair.4bpp.pvr",
+    },
+    {
+        "label":"ASTC (4x4 block size)",
+        "filename":"hotair.astc4x4.ktx",
+    },
+    {
+        "label":"ASTC (8x8 block size)",
+        "filename":"hotair.astc8x8.ktx",
+    },
+    {
+        "label":"ETC2",
+        "filename":"hotair.etc2.pvr",
+    },
+]

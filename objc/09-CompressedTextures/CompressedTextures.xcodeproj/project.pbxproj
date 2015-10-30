@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		831034C71AE8134D00E8D2F6 /* hotair.etc2.pvr in Resources */ = {isa = PBXBuildFile; fileRef = 831034C61AE8134600E8D2F6 /* hotair.etc2.pvr */; };
+		831034CA1AE965A000E8D2F6 /* MBETextureDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 831034C91AE965A000E8D2F6 /* MBETextureDataSource.m */; };
+		83419B831AE1B77500148DCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83419B821AE1B77500148DCA /* main.m */; };
+		83419B861AE1B77500148DCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83419B851AE1B77500148DCA /* AppDelegate.m */; };
+		83419B8C1AE1B77500148DCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83419B8A1AE1B77500148DCA /* Main.storyboard */; };
+		83419B8E1AE1B77500148DCA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83419B8D1AE1B77500148DCA /* Images.xcassets */; };
+		83419B911AE1B77500148DCA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83419B8F1AE1B77500148DCA /* LaunchScreen.xib */; };
+		83419BAD1AE1EA7100148DCA /* MBEMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83419BA71AE1EA7100148DCA /* MBEMathUtilities.m */; };
+		83419BAE1AE1EA7100148DCA /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83419BA91AE1EA7100148DCA /* MBEMetalView.m */; };
+		83419BAF1AE1EA7100148DCA /* MBEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83419BAC1AE1EA7100148DCA /* MBEViewController.m */; };
+		83419BB21AE1EAC900148DCA /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83419BB11AE1EAC900148DCA /* MBERenderer.m */; };
+		83419BB41AE45C7400148DCA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83419BB31AE45C7400148DCA /* Shaders.metal */; };
+		836731A11AE5B16E004EB1C3 /* hotair.png in Resources */ = {isa = PBXBuildFile; fileRef = 8367319B1AE5B16E004EB1C3 /* hotair.png */; };
+		836731A81AE60F11004EB1C3 /* textures.json in Resources */ = {isa = PBXBuildFile; fileRef = 836731A71AE60F11004EB1C3 /* textures.json */; };
+		836731AA1AE6D0B6004EB1C3 /* hotair.4bpp.pvr in Resources */ = {isa = PBXBuildFile; fileRef = 836731A91AE6D087004EB1C3 /* hotair.4bpp.pvr */; };
+		836731AC1AE6F39F004EB1C3 /* hotair.2bpp.pvr in Resources */ = {isa = PBXBuildFile; fileRef = 836731AB1AE6F302004EB1C3 /* hotair.2bpp.pvr */; };
+		839E18821BE16CAC00944528 /* hotair.astc4x4.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 839E18801BE16CAC00944528 /* hotair.astc4x4.ktx */; };
+		839E18831BE16CAC00944528 /* hotair.astc8x8.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 839E18811BE16CAC00944528 /* hotair.astc8x8.ktx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		831034C61AE8134600E8D2F6 /* hotair.etc2.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotair.etc2.pvr; sourceTree = "<group>"; };
+		831034C81AE965A000E8D2F6 /* MBETextureDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBETextureDataSource.h; sourceTree = "<group>"; };
+		831034C91AE965A000E8D2F6 /* MBETextureDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBETextureDataSource.m; sourceTree = "<group>"; };
+		83419B7D1AE1B77500148DCA /* CompressedTextures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompressedTextures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83419B811AE1B77500148DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83419B821AE1B77500148DCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83419B841AE1B77500148DCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		83419B851AE1B77500148DCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		83419B8B1AE1B77500148DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83419B8D1AE1B77500148DCA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		83419B901AE1B77500148DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		83419BA61AE1EA7100148DCA /* MBEMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMathUtilities.h; sourceTree = "<group>"; };
+		83419BA71AE1EA7100148DCA /* MBEMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMathUtilities.m; sourceTree = "<group>"; };
+		83419BA81AE1EA7100148DCA /* MBEMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalView.h; sourceTree = "<group>"; };
+		83419BA91AE1EA7100148DCA /* MBEMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalView.m; sourceTree = "<group>"; };
+		83419BAA1AE1EA7100148DCA /* MBETypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBETypes.h; sourceTree = "<group>"; };
+		83419BAB1AE1EA7100148DCA /* MBEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEViewController.h; sourceTree = "<group>"; };
+		83419BAC1AE1EA7100148DCA /* MBEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEViewController.m; sourceTree = "<group>"; };
+		83419BB01AE1EAC900148DCA /* MBERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBERenderer.h; sourceTree = "<group>"; };
+		83419BB11AE1EAC900148DCA /* MBERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBERenderer.m; sourceTree = "<group>"; };
+		83419BB31AE45C7400148DCA /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		8367319B1AE5B16E004EB1C3 /* hotair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotair.png; sourceTree = "<group>"; };
+		836731A71AE60F11004EB1C3 /* textures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = textures.json; sourceTree = "<group>"; };
+		836731A91AE6D087004EB1C3 /* hotair.4bpp.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotair.4bpp.pvr; sourceTree = "<group>"; };
+		836731AB1AE6F302004EB1C3 /* hotair.2bpp.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotair.2bpp.pvr; sourceTree = "<group>"; };
+		839E18801BE16CAC00944528 /* hotair.astc4x4.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotair.astc4x4.ktx; sourceTree = "<group>"; };
+		839E18811BE16CAC00944528 /* hotair.astc8x8.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotair.astc8x8.ktx; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83419B7A1AE1B77500148DCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83419B741AE1B77500148DCA = {
+			isa = PBXGroup;
+			children = (
+				83419B7F1AE1B77500148DCA /* CompressedTextures */,
+				83419B7E1AE1B77500148DCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83419B7E1AE1B77500148DCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83419B7D1AE1B77500148DCA /* CompressedTextures.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83419B7F1AE1B77500148DCA /* CompressedTextures */ = {
+			isa = PBXGroup;
+			children = (
+				83419B841AE1B77500148DCA /* AppDelegate.h */,
+				83419B851AE1B77500148DCA /* AppDelegate.m */,
+				83419BA61AE1EA7100148DCA /* MBEMathUtilities.h */,
+				83419BA71AE1EA7100148DCA /* MBEMathUtilities.m */,
+				83419BA81AE1EA7100148DCA /* MBEMetalView.h */,
+				83419BA91AE1EA7100148DCA /* MBEMetalView.m */,
+				831034C81AE965A000E8D2F6 /* MBETextureDataSource.h */,
+				831034C91AE965A000E8D2F6 /* MBETextureDataSource.m */,
+				83419BB01AE1EAC900148DCA /* MBERenderer.h */,
+				83419BB11AE1EAC900148DCA /* MBERenderer.m */,
+				83419BAA1AE1EA7100148DCA /* MBETypes.h */,
+				83419BAB1AE1EA7100148DCA /* MBEViewController.h */,
+				83419BAC1AE1EA7100148DCA /* MBEViewController.m */,
+				83419BB31AE45C7400148DCA /* Shaders.metal */,
+				83419B8A1AE1B77500148DCA /* Main.storyboard */,
+				83419B8F1AE1B77500148DCA /* LaunchScreen.xib */,
+				83419B8D1AE1B77500148DCA /* Images.xcassets */,
+				836731951AE5B16E004EB1C3 /* Textures */,
+				83419B801AE1B77500148DCA /* Supporting Files */,
+			);
+			path = CompressedTextures;
+			sourceTree = "<group>";
+		};
+		83419B801AE1B77500148DCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83419B811AE1B77500148DCA /* Info.plist */,
+				83419B821AE1B77500148DCA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		836731951AE5B16E004EB1C3 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				836731A71AE60F11004EB1C3 /* textures.json */,
+				836731AB1AE6F302004EB1C3 /* hotair.2bpp.pvr */,
+				836731A91AE6D087004EB1C3 /* hotair.4bpp.pvr */,
+				831034C61AE8134600E8D2F6 /* hotair.etc2.pvr */,
+				839E18801BE16CAC00944528 /* hotair.astc4x4.ktx */,
+				839E18811BE16CAC00944528 /* hotair.astc8x8.ktx */,
+				8367319B1AE5B16E004EB1C3 /* hotair.png */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83419B7C1AE1B77500148DCA /* CompressedTextures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83419BA01AE1B77500148DCA /* Build configuration list for PBXNativeTarget "CompressedTextures" */;
+			buildPhases = (
+				83419B791AE1B77500148DCA /* Sources */,
+				83419B7A1AE1B77500148DCA /* Frameworks */,
+				83419B7B1AE1B77500148DCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CompressedTextures;
+			productName = CompressedTextures;
+			productReference = 83419B7D1AE1B77500148DCA /* CompressedTextures.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83419B751AE1B77500148DCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Metal By Example";
+				TargetAttributes = {
+					83419B7C1AE1B77500148DCA = {
+						CreatedOnToolsVersion = 6.3;
+					};
+				};
+			};
+			buildConfigurationList = 83419B781AE1B77500148DCA /* Build configuration list for PBXProject "CompressedTextures" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83419B741AE1B77500148DCA;
+			productRefGroup = 83419B7E1AE1B77500148DCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83419B7C1AE1B77500148DCA /* CompressedTextures */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83419B7B1AE1B77500148DCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831034C71AE8134D00E8D2F6 /* hotair.etc2.pvr in Resources */,
+				839E18831BE16CAC00944528 /* hotair.astc8x8.ktx in Resources */,
+				839E18821BE16CAC00944528 /* hotair.astc4x4.ktx in Resources */,
+				836731AC1AE6F39F004EB1C3 /* hotair.2bpp.pvr in Resources */,
+				836731AA1AE6D0B6004EB1C3 /* hotair.4bpp.pvr in Resources */,
+				836731A81AE60F11004EB1C3 /* textures.json in Resources */,
+				83419B8C1AE1B77500148DCA /* Main.storyboard in Resources */,
+				83419B911AE1B77500148DCA /* LaunchScreen.xib in Resources */,
+				836731A11AE5B16E004EB1C3 /* hotair.png in Resources */,
+				83419B8E1AE1B77500148DCA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83419B791AE1B77500148DCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83419B861AE1B77500148DCA /* AppDelegate.m in Sources */,
+				83419BB41AE45C7400148DCA /* Shaders.metal in Sources */,
+				83419BB21AE1EAC900148DCA /* MBERenderer.m in Sources */,
+				83419B831AE1B77500148DCA /* main.m in Sources */,
+				83419BAF1AE1EA7100148DCA /* MBEViewController.m in Sources */,
+				83419BAE1AE1EA7100148DCA /* MBEMetalView.m in Sources */,
+				831034CA1AE965A000E8D2F6 /* MBETextureDataSource.m in Sources */,
+				83419BAD1AE1EA7100148DCA /* MBEMathUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83419B8A1AE1B77500148DCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83419B8B1AE1B77500148DCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83419B8F1AE1B77500148DCA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83419B901AE1B77500148DCA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83419B9E1AE1B77500148DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83419B9F1AE1B77500148DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83419BA11AE1B77500148DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CompressedTextures/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalbyexample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83419BA21AE1B77500148DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CompressedTextures/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalbyexample.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83419B781AE1B77500148DCA /* Build configuration list for PBXProject "CompressedTextures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83419B9E1AE1B77500148DCA /* Debug */,
+				83419B9F1AE1B77500148DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83419BA01AE1B77500148DCA /* Build configuration list for PBXNativeTarget "CompressedTextures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83419BA11AE1B77500148DCA /* Debug */,
+				83419BA21AE1B77500148DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83419B751AE1B77500148DCA /* Project object */;
+}
