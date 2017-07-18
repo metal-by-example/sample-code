@@ -194,6 +194,7 @@ static inline float random_unit_float()
                                                                                           width:drawableSize.width
                                                                                          height:drawableSize.height
                                                                                       mipmapped:NO];
+    descriptor.usage = MTLTextureUsageRenderTarget;
     self.depthTexture = [self.device newTextureWithDescriptor:descriptor];
     [self.depthTexture setLabel:@"Depth Texture"];
 }

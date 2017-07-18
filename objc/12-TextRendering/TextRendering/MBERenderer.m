@@ -174,6 +174,7 @@ static float MBEFontAtlasSize = 2048;
                                                                                           width:drawableSize.width
                                                                                          height:drawableSize.height
                                                                                       mipmapped:NO];
+    descriptor.usage = MTLTextureUsageRenderTarget;
     self.depthTexture = [self.device newTextureWithDescriptor:descriptor];
     [self.depthTexture setLabel:@"Depth Texture"];
 }

@@ -47,6 +47,7 @@
                                                                                                      width:[inputTexture width]
                                                                                                     height:[inputTexture height]
                                                                                                  mipmapped:NO];
+        textureDescriptor.usage = MTLTextureUsageShaderWrite|MTLTextureUsageShaderRead;
         self.internalTexture = [self.context.device newTextureWithDescriptor:textureDescriptor];
     }
     

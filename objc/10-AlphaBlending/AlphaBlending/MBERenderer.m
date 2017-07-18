@@ -203,6 +203,7 @@ static const size_t MBETreeUniformOffset = MBEWaterUniformOffset + sizeof(Instan
                                                                                           width:drawableSize.width
                                                                                          height:drawableSize.height
                                                                                       mipmapped:NO];
+    descriptor.usage = MTLTextureUsageRenderTarget;
     self.depthTexture = [self.device newTextureWithDescriptor:descriptor];
     [self.depthTexture setLabel:@"Depth Texture"];
 }
