@@ -138,6 +138,7 @@ static const vector_float3 Y = { 0, 1, 0 };
                                                                                             width:drawableSize.width
                                                                                            height:drawableSize.height
                                                                                         mipmapped:NO];
+    depthTexDesc.usage = MTLTextureUsageRenderTarget;
     self.depthTexture = [self.device newTextureWithDescriptor:depthTexDesc];
 }
 

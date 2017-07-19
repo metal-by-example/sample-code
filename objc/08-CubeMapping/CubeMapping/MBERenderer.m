@@ -118,6 +118,7 @@
                                                                                             width:drawableSize.width
                                                                                            height:drawableSize.height
                                                                                         mipmapped:NO];
+    depthTexDesc.usage = MTLTextureUsageRenderTarget;
     self.depthTexture = [self.device newTextureWithDescriptor:depthTexDesc];
 }
 
