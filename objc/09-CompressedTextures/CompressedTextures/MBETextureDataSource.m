@@ -960,6 +960,7 @@ typedef NS_ENUM(NSInteger, MBEKTXInternalFormat)
                                                                                                  width:self.width
                                                                                                 height:self.height
                                                                                              mipmapped:needMipStorage];
+        texDescriptor.usage = MTLTextureUsageShaderRead;
         id<MTLTexture> texture = [[commandQueue device] newTextureWithDescriptor:texDescriptor];
 
         __block NSInteger levelWidth = self.width;

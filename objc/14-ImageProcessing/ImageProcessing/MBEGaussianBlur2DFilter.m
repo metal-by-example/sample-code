@@ -69,7 +69,8 @@
                                                                                                  width:size
                                                                                                 height:size
                                                                                              mipmapped:NO];
-    
+    textureDescriptor.usage = MTLTextureUsageShaderRead;
+
     self.blurWeightTexture = [self.context.device newTextureWithDescriptor:textureDescriptor];
     
     MTLRegion region = MTLRegionMake2D(0, 0, size, size);

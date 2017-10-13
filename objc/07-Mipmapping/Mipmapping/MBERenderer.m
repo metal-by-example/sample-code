@@ -54,14 +54,18 @@ static const vector_float3 Y = { 0, 1, 0 };
 - (void)buildPipeline
 {
     MTLVertexDescriptor *vertexDescriptor = [MTLVertexDescriptor new];
-    vertexDescriptor.attributes[0].bufferIndex = 0;
     vertexDescriptor.attributes[0].offset = 0;
     vertexDescriptor.attributes[0].format = MTLVertexFormatFloat4;
-    
+    vertexDescriptor.attributes[0].bufferIndex = 0;
+
     vertexDescriptor.attributes[1].offset = sizeof(vector_float4);
     vertexDescriptor.attributes[1].format = MTLVertexFormatFloat4;
     vertexDescriptor.attributes[1].bufferIndex = 0;
-    
+
+    vertexDescriptor.attributes[2].offset = 2 * sizeof(vector_float4);
+    vertexDescriptor.attributes[2].format = MTLVertexFormatFloat2;
+    vertexDescriptor.attributes[2].bufferIndex = 0;
+
     vertexDescriptor.layouts[0].stepFunction = MTLVertexStepFunctionPerVertex;
     vertexDescriptor.layouts[0].stepRate = 1;
     vertexDescriptor.layouts[0].stride = sizeof(MBEVertex);

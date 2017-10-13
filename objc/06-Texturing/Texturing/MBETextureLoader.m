@@ -32,6 +32,7 @@
                                                                                                  width:imageSize.width
                                                                                                 height:imageSize.height
                                                                                              mipmapped:mipmapped];
+    textureDescriptor.usage = MTLTextureUsageShaderRead;
     id<MTLTexture> texture = [[queue device] newTextureWithDescriptor:textureDescriptor];
 
     [texture setLabel:imageName];

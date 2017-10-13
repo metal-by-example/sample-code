@@ -9,10 +9,10 @@ constant float kAlphaTestReferenceValue = 0.5;
 
 struct Vertex
 {
-    packed_float4 position [[attribute(0)]];
-    packed_float4 normal [[attribute(1)]];
-    packed_float4 diffuseColor [[attribute(2)]];
-    packed_float2 texCoords [[attribute(3)]];
+    float4 position [[attribute(0)]];
+    float4 normal [[attribute(1)]];
+    float4 diffuseColor [[attribute(2)]];
+    float2 texCoords [[attribute(3)]];
 };
 
 struct ProjectedVertex
@@ -34,7 +34,7 @@ struct InstanceUniforms
     float4x4 normalMatrix;
 };
 
-vertex ProjectedVertex project_vertex(constant Vertex *vertices [[buffer(0)]],
+vertex ProjectedVertex project_vertex(Vertex vertexIn [[stage_in]],
                                       constant Uniforms &uniforms [[buffer(1)]],
                                       constant InstanceUniforms *instanceUniforms [[buffer(2)]],
                                       ushort vid [[vertex_id]],
@@ -44,10 +44,10 @@ vertex ProjectedVertex project_vertex(constant Vertex *vertices [[buffer(0)]],
     float4x4 normalMatrix = instanceUniforms[iid].normalMatrix;
 
     ProjectedVertex outVert;
-    outVert.position = uniforms.viewProjectionMatrix * modelMatrix * float4(vertices[vid].position);
-    outVert.normal = normalMatrix * float4(vertices[vid].normal);
-    outVert.diffuseColor = vertices[vid].diffuseColor;
-    outVert.texCoords = vertices[vid].texCoords;
+    outVert.position = uniforms.viewProjectionMatrix * modelMatrix * float4(vertexIn.position);
+    outVert.normal = normalMatrix * float4(vertexIn.normal);
+    outVert.diffuseColor = vertexIn.diffuseColor;
+    outVert.texCoords = vertexIn.texCoords;
 
     return outVert;
 }

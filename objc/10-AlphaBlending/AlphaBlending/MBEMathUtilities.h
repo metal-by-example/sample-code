@@ -7,7 +7,7 @@ float random_float(float min, float max);
 /// Returns a vector that is orthogonal to the input vector
 vector_float3 vector_orthogonal(vector_float3 v);
 
-matrix_float4x4 matrix_identity();
+matrix_float4x4 matrix_identity(void);
 
 matrix_float4x4 matrix_rotation(vector_float3 axis, float angle);
 

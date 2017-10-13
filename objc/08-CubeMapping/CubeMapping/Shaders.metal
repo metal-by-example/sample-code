@@ -11,8 +11,8 @@ constant float kEtaRatio = kEtaAir / kEtaGlass;
 
 struct Vertex
 {
-    packed_float4 position [[attribute(0)]];
-    packed_float4 normal [[attribute(1)]];
+    float4 position [[attribute(0)]];
+    float4 normal [[attribute(1)]];
 };
 
 struct ProjectedVertex
@@ -30,11 +30,11 @@ struct Uniforms
     float4 worldCameraPosition;
 };
 
-vertex ProjectedVertex vertex_skybox(device Vertex *vertices     [[buffer(0)]],
+vertex ProjectedVertex vertex_skybox(Vertex inVertex             [[stage_in]],
                                      constant Uniforms &uniforms [[buffer(1)]],
                                      uint vid                    [[vertex_id]])
 {
-    float4 position = vertices[vid].position;
+    float4 position = inVertex.position;
     
     ProjectedVertex outVert;
     outVert.position = uniforms.modelViewProjectionMatrix * position;
@@ -42,12 +42,12 @@ vertex ProjectedVertex vertex_skybox(device Vertex *vertices     [[buffer(0)]],
     return outVert;
 }
 
-vertex ProjectedVertex vertex_reflect(device Vertex *vertices     [[buffer(0)]],
+vertex ProjectedVertex vertex_reflect(Vertex inVertex             [[stage_in]],
                                       constant Uniforms &uniforms [[buffer(1)]],
                                       uint vid                    [[vertex_id]])
 {
-    float4 modelPosition = vertices[vid].position;
-    float4 modelNormal = vertices[vid].normal;
+    float4 modelPosition = inVertex.position;
+    float4 modelNormal = inVertex.normal;
     
     float4 worldCameraPosition = uniforms.worldCameraPosition;
     float4 worldPosition = uniforms.modelMatrix * modelPosition;
@@ -61,12 +61,12 @@ vertex ProjectedVertex vertex_reflect(device Vertex *vertices     [[buffer(0)]],
     return outVert;
 }
 
-vertex ProjectedVertex vertex_refract(device Vertex *vertices     [[buffer(0)]],
+vertex ProjectedVertex vertex_refract(Vertex inVertex             [[stage_in]],
                                       constant Uniforms &uniforms [[buffer(1)]],
                                       uint vid                    [[vertex_id]])
 {
-    float4 modelPosition = vertices[vid].position;
-    float4 modelNormal = vertices[vid].normal;
+    float4 modelPosition = inVertex.position;
+    float4 modelNormal = inVertex.normal;
 
     float4 worldCameraPosition = uniforms.worldCameraPosition;
     float4 worldPosition = uniforms.modelMatrix * modelPosition;

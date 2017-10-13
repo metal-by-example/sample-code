@@ -8,7 +8,7 @@ float random_float(float min, float max);
 vector_float3 vector_orthogonal(vector_float3 v);
 
 /// Returns the identity matrix
-matrix_float4x4 matrix_identity();
+matrix_float4x4 matrix_identity(void);
 
 /// Returns the matrix that rotates by `angle` radians about `axis`
 matrix_float4x4 matrix_rotation(vector_float3 axis, float angle);

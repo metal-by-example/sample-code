@@ -5,9 +5,9 @@ constant float3 kLightDirection(-0.43, -0.8, -0.43);
 
 struct InVertex
 {
-    packed_float4 position [[attribute(0)]];
-    packed_float4 normal [[attribute(1)]];
-    packed_float2 texCoords [[attribute(2)]];
+    float4 position [[attribute(0)]];
+    float4 normal [[attribute(1)]];
+    float2 texCoords [[attribute(2)]];
 };
 
 struct ProjectedVertex
@@ -28,7 +28,7 @@ struct PerInstanceUniforms
     float3x3 normalMatrix;
 };
 
-vertex ProjectedVertex vertex_project(device InVertex *vertices [[buffer(0)]],
+vertex ProjectedVertex vertex_project(InVertex vertexIn [[stage_in]],
                                       constant Uniforms &uniforms [[buffer(1)]],
                                       constant PerInstanceUniforms *perInstanceUniforms [[buffer(2)]],
                                       ushort vid [[vertex_id]],
@@ -38,9 +38,9 @@ vertex ProjectedVertex vertex_project(device InVertex *vertices [[buffer(0)]],
     float3x3 instanceNormalMatrix = perInstanceUniforms[iid].normalMatrix;
     
     ProjectedVertex outVert;
-    outVert.position = uniforms.viewProjectionMatrix * instanceModelMatrix * float4(vertices[vid].position);
-    outVert.normal = instanceNormalMatrix * float4(vertices[vid].normal).xyz;
-    outVert.texCoords = vertices[vid].texCoords;
+    outVert.position = uniforms.viewProjectionMatrix * instanceModelMatrix * float4(vertexIn.position);
+    outVert.normal = instanceNormalMatrix * float4(vertexIn.normal).xyz;
+    outVert.texCoords = vertexIn.texCoords;
     return outVert;
 }
 

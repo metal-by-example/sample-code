@@ -52,6 +52,7 @@
                                                                                                  width:width
                                                                                                 height:height
                                                                                              mipmapped:NO];
+    textureDescriptor.usage = MTLTextureUsageShaderRead;
     id<MTLTexture> texture = [context.device newTextureWithDescriptor:textureDescriptor];
     
     MTLRegion region = MTLRegionMake2D(0, 0, width, height);

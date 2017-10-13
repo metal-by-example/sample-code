@@ -143,6 +143,7 @@ static float MBEFontAtlasSize = 2048;
                                                                                            width:MBEFontAtlasSize
                                                                                           height:MBEFontAtlasSize
                                                                                        mipmapped:NO];
+    textureDesc.usage = MTLTextureUsageShaderRead;
     MTLRegion region = MTLRegionMake2D(0, 0, MBEFontAtlasSize, MBEFontAtlasSize);
     _fontTexture = [_device newTextureWithDescriptor:textureDesc];
     [_fontTexture setLabel:@"Font Atlas"];

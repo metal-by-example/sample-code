@@ -1,6 +1,6 @@
 @import simd;
 
-matrix_float4x4 identity();
+matrix_float4x4 identity(void);
 
 matrix_float4x4 rotation_about_axis(vector_float3 axis, float angle);
 

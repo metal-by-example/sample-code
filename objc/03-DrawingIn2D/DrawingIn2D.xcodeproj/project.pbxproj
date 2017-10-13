@@ -13,12 +13,12 @@
 		83E2D7721BD188110006DDD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D7701BD188110006DDD8 /* Main.storyboard */; };
 		83E2D7741BD188110006DDD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D7731BD188110006DDD8 /* Assets.xcassets */; };
 		83E2D7771BD188110006DDD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D7751BD188110006DDD8 /* LaunchScreen.storyboard */; };
-		83E2D7811BD188710006DDD8 /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D77F1BD188710006DDD8 /* MBEMetalView.m */; settings = {ASSET_TAGS = (); }; };
-		83E2D7821BD188710006DDD8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7801BD188710006DDD8 /* Shaders.metal */; settings = {ASSET_TAGS = (); }; };
+		83E2D7811BD188710006DDD8 /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D77F1BD188710006DDD8 /* MBEMetalView.m */; };
+		83E2D7821BD188710006DDD8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7801BD188710006DDD8 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83E2D7641BD188110006DDD8 /* DrawingIn2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrawingIn2D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E2D7641BD188110006DDD8 /* DrawingIn2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingIn2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E2D7681BD188110006DDD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83E2D76A1BD188110006DDD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83E2D76B1BD188110006DDD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 				83E2D7781BD188110006DDD8 /* Info.plist */,
 				83E2D7671BD188110006DDD8 /* Supporting Files */,
 			);
-			path = "DrawingIn2D";
+			path = DrawingIn2D;
 			sourceTree = "<group>";
 		};
 		83E2D7671BD188110006DDD8 /* Supporting Files */ = {
@@ -102,8 +102,8 @@
 			);
 			dependencies = (
 			);
-			name = "DrawingIn2D";
-			productName = "DrawingIn2D";
+			name = DrawingIn2D;
+			productName = DrawingIn2D;
 			productReference = 83E2D7641BD188110006DDD8 /* DrawingIn2D.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -113,7 +113,7 @@
 		83E2D75C1BD188110006DDD8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Metal by Example";
 				TargetAttributes = {
 					83E2D7631BD188110006DDD8 = {
@@ -195,13 +195,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -239,13 +247,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -312,6 +328,7 @@
 				83E2D77D1BD188110006DDD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
