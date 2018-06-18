@@ -42,7 +42,7 @@
 		83E2D7AD1BD598810006DDD8 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		83E2D7B01BD598810006DDD8 /* MBEMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMathUtilities.h; sourceTree = "<group>"; };
 		83E2D7B11BD598810006DDD8 /* MBEMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMathUtilities.m; sourceTree = "<group>"; };
-		845182E120D8214900BF473E /* DrawingIn3D-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrawingIn3D-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		845182E120D8214900BF473E /* Drawing in 3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drawing in 3D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845182E320D8214900BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		845182E420D8214900BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		845182E620D8214900BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				83E2D78C1BD597A30006DDD8 /* DrawingIn3D.app */,
-				845182E120D8214900BF473E /* DrawingIn3D-Mac.app */,
+				845182E120D8214900BF473E /* Drawing in 3D.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 			);
 			name = "DrawingIn3D-Mac";
 			productName = "DrawingIn3D-Mac";
-			productReference = 845182E120D8214900BF473E /* DrawingIn3D-Mac.app */;
+			productReference = 845182E120D8214900BF473E /* Drawing in 3D.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -433,7 +433,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.DrawingIn3D-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Drawing in 3D";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -457,7 +457,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.DrawingIn3D-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Drawing in 3D";
 				SDKROOT = macosx;
 			};
 			name = Release;
