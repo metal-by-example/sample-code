@@ -14,6 +14,12 @@
 		833FBBB31BBE0B0E001EFE4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 833FBBB21BBE0B0E001EFE4D /* Assets.xcassets */; };
 		833FBBB61BBE0B0E001EFE4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833FBBB41BBE0B0E001EFE4D /* LaunchScreen.storyboard */; };
 		833FBBBF1BBE0C19001EFE4D /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833FBBBE1BBE0C19001EFE4D /* MBEMetalView.m */; };
+		845182A920D7ECBD00BF473E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182A820D7ECBD00BF473E /* AppDelegate.m */; };
+		845182AC20D7ECBD00BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182AB20D7ECBD00BF473E /* ViewController.m */; };
+		845182AE20D7ECBE00BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845182AD20D7ECBE00BF473E /* Assets.xcassets */; };
+		845182B120D7ECBE00BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845182AF20D7ECBE00BF473E /* Main.storyboard */; };
+		845182B420D7ECBE00BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182B320D7ECBE00BF473E /* main.m */; };
+		845182B920D7ED1300BF473E /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833FBBBE1BBE0C19001EFE4D /* MBEMetalView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,10 +35,27 @@
 		833FBBB71BBE0B0E001EFE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		833FBBBD1BBE0C19001EFE4D /* MBEMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalView.h; sourceTree = "<group>"; };
 		833FBBBE1BBE0C19001EFE4D /* MBEMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalView.m; sourceTree = "<group>"; };
+		845182A520D7ECBD00BF473E /* Clear Screen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clear Screen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		845182A720D7ECBD00BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		845182A820D7ECBD00BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		845182AA20D7ECBD00BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		845182AB20D7ECBD00BF473E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		845182AD20D7ECBE00BF473E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		845182B020D7ECBE00BF473E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		845182B220D7ECBE00BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845182B320D7ECBE00BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845182B520D7ECBE00BF473E /* ClearScreen_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClearScreen_Mac.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		833FBBA01BBE0B0E001EFE4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845182A220D7ECBD00BF473E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				833FBBA51BBE0B0E001EFE4D /* ClearScreen */,
+				845182A620D7ECBD00BF473E /* ClearScreen-Mac */,
 				833FBBA41BBE0B0E001EFE4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				833FBBA31BBE0B0E001EFE4D /* ClearScreen.app */,
+				845182A520D7ECBD00BF473E /* Clear Screen.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +109,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		845182A620D7ECBD00BF473E /* ClearScreen-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				845182A720D7ECBD00BF473E /* AppDelegate.h */,
+				845182A820D7ECBD00BF473E /* AppDelegate.m */,
+				845182AA20D7ECBD00BF473E /* ViewController.h */,
+				845182AB20D7ECBD00BF473E /* ViewController.m */,
+				845182AD20D7ECBE00BF473E /* Assets.xcassets */,
+				845182AF20D7ECBE00BF473E /* Main.storyboard */,
+				845182B220D7ECBE00BF473E /* Info.plist */,
+				845182B320D7ECBE00BF473E /* main.m */,
+				845182B520D7ECBE00BF473E /* ClearScreen_Mac.entitlements */,
+			);
+			path = "ClearScreen-Mac";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,6 +145,23 @@
 			productReference = 833FBBA31BBE0B0E001EFE4D /* ClearScreen.app */;
 			productType = "com.apple.product-type.application";
 		};
+		845182A420D7ECBD00BF473E /* ClearScreen-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845182B620D7ECBE00BF473E /* Build configuration list for PBXNativeTarget "ClearScreen-Mac" */;
+			buildPhases = (
+				845182A120D7ECBD00BF473E /* Sources */,
+				845182A220D7ECBD00BF473E /* Frameworks */,
+				845182A320D7ECBD00BF473E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ClearScreen-Mac";
+			productName = "ClearScreen-Mac";
+			productReference = 845182A520D7ECBD00BF473E /* Clear Screen.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -115,6 +173,10 @@
 				TargetAttributes = {
 					833FBBA21BBE0B0E001EFE4D = {
 						CreatedOnToolsVersion = 7.0;
+					};
+					845182A420D7ECBD00BF473E = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -132,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				833FBBA21BBE0B0E001EFE4D /* ClearScreen */,
+				845182A420D7ECBD00BF473E /* ClearScreen-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -147,6 +210,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		845182A320D7ECBD00BF473E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845182AE20D7ECBE00BF473E /* Assets.xcassets in Resources */,
+				845182B120D7ECBE00BF473E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -158,6 +230,17 @@
 				833FBBAB1BBE0B0E001EFE4D /* AppDelegate.m in Sources */,
 				833FBBA81BBE0B0E001EFE4D /* main.m in Sources */,
 				833FBBBF1BBE0C19001EFE4D /* MBEMetalView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845182A120D7ECBD00BF473E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845182AC20D7ECBD00BF473E /* ViewController.m in Sources */,
+				845182B420D7ECBE00BF473E /* main.m in Sources */,
+				845182A920D7ECBD00BF473E /* AppDelegate.m in Sources */,
+				845182B920D7ED1300BF473E /* MBEMetalView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +261,14 @@
 				833FBBB51BBE0B0E001EFE4D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		845182AF20D7ECBE00BF473E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845182B020D7ECBE00BF473E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -309,6 +400,54 @@
 			};
 			name = Release;
 		};
+		845182B720D7ECBE00BF473E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "ClearScreen-Mac/ClearScreen_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "ClearScreen-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.ClearScreen-Mac";
+				PRODUCT_NAME = "Clear Screen";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		845182B820D7ECBE00BF473E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "ClearScreen-Mac/ClearScreen_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "ClearScreen-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.ClearScreen-Mac";
+				PRODUCT_NAME = "Clear Screen";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -326,6 +465,15 @@
 			buildConfigurations = (
 				833FBBBB1BBE0B0E001EFE4D /* Debug */,
 				833FBBBC1BBE0B0E001EFE4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845182B620D7ECBE00BF473E /* Build configuration list for PBXNativeTarget "ClearScreen-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845182B720D7ECBE00BF473E /* Debug */,
+				845182B820D7ECBE00BF473E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
