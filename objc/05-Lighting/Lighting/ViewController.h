@@ -1,6 +1,14 @@
-@import UIKit;
+#import <TargetConditionals.h>
 
-@interface ViewController : UIViewController
+#if TARGET_OS_IPHONE
+@import UIKit;
+#define NSUIViewController UIViewController
+#else
+@import AppKit;
+#define NSUIViewController NSViewController
+#endif
+
+@interface ViewController : NSUIViewController
 
 @end
 

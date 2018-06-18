@@ -23,10 +23,21 @@
 		839E18BD1BE31EC300944528 /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 839E18BC1BE31EC300944528 /* teapot.obj */; };
 		839E18C01BE3224E00944528 /* MBEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18BF1BE3224E00944528 /* MBEMesh.m */; };
 		8451830C20D8346200BF473E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451830B20D8346200BF473E /* AppDelegate.m */; };
-		8451830F20D8346200BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451830E20D8346200BF473E /* ViewController.m */; };
 		8451831120D8346200BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8451831020D8346200BF473E /* Assets.xcassets */; };
 		8451831420D8346200BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8451831220D8346200BF473E /* Main.storyboard */; };
 		8451831720D8346200BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451831620D8346200BF473E /* main.m */; };
+		8451831E20D835D400BF473E /* MBEMetalViewIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451831D20D835D400BF473E /* MBEMetalViewIOS.m */; };
+		8451832120D835EB00BF473E /* MBEMetalViewMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451832020D835EB00BF473E /* MBEMetalViewMac.m */; };
+		8451832220D84E2A00BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18971BE31CDA00944528 /* ViewController.m */; };
+		8451832320D84E5800BF473E /* MBEMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18A81BE31D6100944528 /* MBEMathUtilities.m */; };
+		8451832420D84E5800BF473E /* MBEOBJGroup.mm in Sources */ = {isa = PBXBuildFile; fileRef = 839E18B31BE31DE300944528 /* MBEOBJGroup.mm */; };
+		8451832520D84E5800BF473E /* MBEOBJModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 839E18B71BE31DE300944528 /* MBEOBJModel.mm */; };
+		8451832620D84E5C00BF473E /* MBEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18BF1BE3224E00944528 /* MBEMesh.m */; };
+		8451832720D84E5C00BF473E /* MBEOBJMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18B51BE31DE300944528 /* MBEOBJMesh.m */; };
+		8451832820D84E6000BF473E /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18AA1BE31D6100944528 /* MBEMetalView.m */; };
+		8451832920D84E7C00BF473E /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18AC1BE31D6100944528 /* MBERenderer.m */; };
+		8451832A20D84EA300BF473E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 839E18B01BE31D8A00944528 /* Shaders.metal */; };
+		8451832B20D84EA300BF473E /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 839E18BC1BE31EC300944528 /* teapot.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,13 +71,15 @@
 		8451830820D8346200BF473E /* Lighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8451830A20D8346200BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8451830B20D8346200BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8451830D20D8346200BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8451830E20D8346200BF473E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8451831020D8346200BF473E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8451831320D8346200BF473E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8451831520D8346200BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8451831620D8346200BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8451831820D8346200BF473E /* Lighting_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lighting_Mac.entitlements; sourceTree = "<group>"; };
+		8451831C20D835D400BF473E /* MBEMetalViewIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewIOS.h; sourceTree = "<group>"; };
+		8451831D20D835D400BF473E /* MBEMetalViewIOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewIOS.m; sourceTree = "<group>"; };
+		8451831F20D835EB00BF473E /* MBEMetalViewMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewMac.h; sourceTree = "<group>"; };
+		8451832020D835EB00BF473E /* MBEMetalViewMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewMac.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,11 +157,13 @@
 		839E18C21BE3252800944528 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				839E18C51BE3256C00944528 /* Storyboards */,
 				839E18931BE31CDA00944528 /* AppDelegate.h */,
 				839E18941BE31CDA00944528 /* AppDelegate.m */,
 				839E18A91BE31D6100944528 /* MBEMetalView.h */,
 				839E18AA1BE31D6100944528 /* MBEMetalView.m */,
+				8451831C20D835D400BF473E /* MBEMetalViewIOS.h */,
+				8451831D20D835D400BF473E /* MBEMetalViewIOS.m */,
+				839E18C51BE3256C00944528 /* Storyboards */,
 				839E18961BE31CDA00944528 /* ViewController.h */,
 				839E18971BE31CDA00944528 /* ViewController.m */,
 			);
@@ -199,13 +214,13 @@
 			children = (
 				8451830A20D8346200BF473E /* AppDelegate.h */,
 				8451830B20D8346200BF473E /* AppDelegate.m */,
-				8451830D20D8346200BF473E /* ViewController.h */,
-				8451830E20D8346200BF473E /* ViewController.m */,
 				8451831020D8346200BF473E /* Assets.xcassets */,
-				8451831220D8346200BF473E /* Main.storyboard */,
 				8451831520D8346200BF473E /* Info.plist */,
-				8451831620D8346200BF473E /* main.m */,
 				8451831820D8346200BF473E /* Lighting_Mac.entitlements */,
+				8451831620D8346200BF473E /* main.m */,
+				8451831220D8346200BF473E /* Main.storyboard */,
+				8451831F20D835EB00BF473E /* MBEMetalViewMac.h */,
+				8451832020D835EB00BF473E /* MBEMetalViewMac.m */,
 			);
 			path = "Lighting-Mac";
 			sourceTree = "<group>";
@@ -302,6 +317,7 @@
 			files = (
 				8451831120D8346200BF473E /* Assets.xcassets in Resources */,
 				8451831420D8346200BF473E /* Main.storyboard in Resources */,
+				8451832B20D84EA300BF473E /* teapot.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +333,7 @@
 				839E18B81BE31DE300944528 /* MBEOBJGroup.mm in Sources */,
 				839E18AF1BE31D6100944528 /* MBERenderer.m in Sources */,
 				839E18BA1BE31DE300944528 /* MBEOBJModel.mm in Sources */,
+				8451831E20D835D400BF473E /* MBEMetalViewIOS.m in Sources */,
 				839E18951BE31CDA00944528 /* AppDelegate.m in Sources */,
 				839E18921BE31CDA00944528 /* main.m in Sources */,
 				839E18AE1BE31D6100944528 /* MBEMetalView.m in Sources */,
@@ -330,9 +347,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8451830F20D8346200BF473E /* ViewController.m in Sources */,
+				8451832A20D84EA300BF473E /* Shaders.metal in Sources */,
+				8451832920D84E7C00BF473E /* MBERenderer.m in Sources */,
 				8451831720D8346200BF473E /* main.m in Sources */,
 				8451830C20D8346200BF473E /* AppDelegate.m in Sources */,
+				8451832420D84E5800BF473E /* MBEOBJGroup.mm in Sources */,
+				8451832820D84E6000BF473E /* MBEMetalView.m in Sources */,
+				8451832320D84E5800BF473E /* MBEMathUtilities.m in Sources */,
+				8451832520D84E5800BF473E /* MBEOBJModel.mm in Sources */,
+				8451832620D84E5C00BF473E /* MBEMesh.m in Sources */,
+				8451832220D84E2A00BF473E /* ViewController.m in Sources */,
+				8451832120D835EB00BF473E /* MBEMetalViewMac.m in Sources */,
+				8451832720D84E5C00BF473E /* MBEOBJMesh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
