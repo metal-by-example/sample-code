@@ -1,6 +1,7 @@
 #import "MBEMetalView.h"
 @import Metal;
 @import simd;
+@import CoreVideo;
 
 typedef struct
 {
@@ -9,17 +10,40 @@ typedef struct
 } MBEVertex;
 
 @interface MBEMetalView ()
+#if TARGET_OS_IPHONE
 @property (nonatomic, strong) CADisplayLink *displayLink;
+#else
+@property (nonatomic) CVDisplayLinkRef displayLink;
+@property (nonatomic, strong) CAMetalLayer *metalLayer;
+#endif
 @property (nonatomic, strong) id<MTLDevice> device;
 @property (nonatomic, strong) id<MTLRenderPipelineState> pipeline;
 @property (nonatomic, strong) id<MTLCommandQueue> commandQueue;
 @property (nonatomic, strong) id<MTLBuffer> vertexBuffer;
+
+- (void)redraw;
 @end
+
+#if TARGET_OS_OSX
+static CVReturn C3DViewDisplayLink(CVDisplayLinkRef displayLink,
+                                   const CVTimeStamp *inNow,
+                                   const CVTimeStamp *inOutputTime,
+                                   CVOptionFlags flagsIn,
+                                   CVOptionFlags *flagsOut,
+                                   void *view) {
+    @autoreleasepool {
+        [(__bridge MBEMetalView *)view redraw];
+    }
+    
+    return kCVReturnSuccess;
+}
+#endif
 
 @implementation MBEMetalView
 
 @synthesize device=device;
 
+#if TARGET_OS_IPHONE
 + (Class)layerClass
 {
     return [CAMetalLayer class];
@@ -56,11 +80,49 @@ typedef struct
         self.displayLink = nil;
     }
 }
+#else
+
+- (CALayer *)makeBackingLayer
+{
+    CAMetalLayer *layer = [[CAMetalLayer alloc] init];
+    _metalLayer = layer;
+    return layer;
+}
+
+- (void)viewDidMoveToSuperview
+{
+    [super viewDidMoveToSuperview];
+    
+    if (!self.device) {
+        [self makeDevice];
+        [self makeBuffers];
+        [self makePipeline];
+    }
+
+    if (self.superview) {
+        CVDisplayLinkCreateWithActiveCGDisplays(&_displayLink);
+        CVDisplayLinkSetOutputCallback(_displayLink, C3DViewDisplayLink, (__bridge void *)(self));
+        CVDisplayLinkStart(_displayLink);
+    }
+    else {
+        CVDisplayLinkStop(_displayLink);
+        CVDisplayLinkRelease(_displayLink);
+        _displayLink = NULL;
+    }
+}
+#endif
 
 - (void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
+    self.metalLayer.drawableSize = self.drawableSize;
+}
+
+#if TARGET_OS_IPHONE
+- (CGSize)drawableSize {
     
+    CGSize drawableSize = self.bounds.size;
+
     // During the first layout pass, we will not be in a view hierarchy, so we guess our scale
     CGFloat scale = [UIScreen mainScreen].scale;
     
@@ -70,17 +132,25 @@ typedef struct
         scale = self.window.screen.scale;
     }
     
-    CGSize drawableSize = self.bounds.size;
-    
     // Since drawable size is in pixels, we need to multiply by the scale to move from points to pixels
     drawableSize.width *= scale;
     drawableSize.height *= scale;
     
-    self.metalLayer.drawableSize = drawableSize;
+    return drawableSize;
 }
 
+#else
+- (CGSize)drawableSize {
+    return self.bounds.size;
+}
+#endif
+
 - (CAMetalLayer *)metalLayer {
+#if TARGET_OS_IPHONE
     return (CAMetalLayer *)self.layer;
+#else
+    return _metalLayer;
+#endif
 }
 
 - (void)makeDevice
@@ -154,9 +224,11 @@ typedef struct
     }
 }
 
+#if TARGET_OS_IPHONE
 - (void)displayLinkDidFire:(CADisplayLink *)displayLink
 {
     [self redraw];
 }
+#endif
 
 @end

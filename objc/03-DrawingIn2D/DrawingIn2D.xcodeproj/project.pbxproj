@@ -20,6 +20,8 @@
 		845182CB20D808C800BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845182CA20D808C800BF473E /* Assets.xcassets */; };
 		845182CE20D808C800BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845182CC20D808C800BF473E /* Main.storyboard */; };
 		845182D120D808C800BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182D020D808C800BF473E /* main.m */; };
+		845182D620D8096300BF473E /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D77F1BD188710006DDD8 /* MBEMetalView.m */; };
+		845182DC20D80E3E00BF473E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7801BD188710006DDD8 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -243,6 +245,8 @@
 				845182C920D808C700BF473E /* ViewController.m in Sources */,
 				845182D120D808C800BF473E /* main.m in Sources */,
 				845182C620D808C700BF473E /* AppDelegate.m in Sources */,
+				845182D620D8096300BF473E /* MBEMetalView.m in Sources */,
+				845182DC20D80E3E00BF473E /* Shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
