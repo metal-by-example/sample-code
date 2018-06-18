@@ -45,6 +45,7 @@
 		845182B220D7ECBE00BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845182B320D7ECBE00BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845182B520D7ECBE00BF473E /* ClearScreen_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClearScreen_Mac.entitlements; sourceTree = "<group>"; };
+		845182BD20D7FAC100BF473E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 		833FBB9A1BBE0B0E001EFE4D = {
 			isa = PBXGroup;
 			children = (
+				845182BD20D7FAC100BF473E /* Config.xcconfig */,
 				833FBBA51BBE0B0E001EFE4D /* ClearScreen */,
 				845182A620D7ECBD00BF473E /* ClearScreen-Mac */,
 				833FBBA41BBE0B0E001EFE4D /* Products */,
@@ -276,6 +278,7 @@
 /* Begin XCBuildConfiguration section */
 		833FBBB81BBE0B0E001EFE4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 845182BD20D7FAC100BF473E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -330,6 +333,7 @@
 		};
 		833FBBB91BBE0B0E001EFE4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 845182BD20D7FAC100BF473E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
