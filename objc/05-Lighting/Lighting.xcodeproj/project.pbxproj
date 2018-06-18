@@ -57,7 +57,7 @@
 		839E18BC1BE31EC300944528 /* teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teapot.obj; sourceTree = "<group>"; };
 		839E18BE1BE3224E00944528 /* MBEMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMesh.h; sourceTree = "<group>"; };
 		839E18BF1BE3224E00944528 /* MBEMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMesh.m; sourceTree = "<group>"; };
-		8451830820D8346200BF473E /* Lighting-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lighting-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8451830820D8346200BF473E /* Lighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8451830A20D8346200BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8451830B20D8346200BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8451830D20D8346200BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				839E188D1BE31CDA00944528 /* Lighting.app */,
-				8451830820D8346200BF473E /* Lighting-Mac.app */,
+				8451830820D8346200BF473E /* Lighting.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			);
 			name = "Lighting-Mac";
 			productName = "Lighting-Mac";
-			productReference = 8451830820D8346200BF473E /* Lighting-Mac.app */;
+			productReference = 8451830820D8346200BF473E /* Lighting.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -509,7 +509,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.Lighting-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Lighting;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -533,7 +533,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.Lighting-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Lighting;
 				SDKROOT = macosx;
 			};
 			name = Release;
