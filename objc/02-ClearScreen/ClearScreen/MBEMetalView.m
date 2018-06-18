@@ -7,30 +7,54 @@
 
 @implementation MBEMetalView
 
+- (CAMetalLayer *)metalLayer {
+    return (CAMetalLayer *)self.layer;
+}
+
+#if TARGET_OS_IPHONE
 + (id)layerClass
 {
     return [CAMetalLayer class];
 }
+
+#else
+- (CALayer *)makeBackingLayer {
+    return [[CAMetalLayer alloc] init];
+}
+
+- (BOOL)wantsUpdateLayer {
+    return YES;
+}
+
+- (void)viewDidMoveToSuperview {
+    [self configureMetal];
+    [self.layer setNeedsDisplay];
+}
+
+- (void)displayLayer:(CALayer *)layer {
+    [self redraw];
+}
+#endif
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if ((self = [super initWithCoder:aDecoder]))
     {
         _device = MTLCreateSystemDefaultDevice();
-        self.metalLayer.device = _device;
-        self.metalLayer.pixelFormat = MTLPixelFormatBGRA8Unorm;
+        [self configureMetal];
     }
 
     return self;
 }
 
-- (CAMetalLayer *)metalLayer {
-    return (CAMetalLayer *)self.layer;
-}
-
 - (void)didMoveToWindow
 {
     [self redraw];
+}
+
+- (void)configureMetal {
+    self.metalLayer.device = _device;
+    self.metalLayer.pixelFormat = MTLPixelFormatBGRA8Unorm;
 }
 
 - (void)redraw
