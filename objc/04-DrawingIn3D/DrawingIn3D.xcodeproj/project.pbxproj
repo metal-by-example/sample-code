@@ -18,10 +18,16 @@
 		83E2D7B61BD598810006DDD8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7AD1BD598810006DDD8 /* Shaders.metal */; };
 		83E2D7B81BD598810006DDD8 /* MBEMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7B11BD598810006DDD8 /* MBEMathUtilities.m */; };
 		845182E520D8214900BF473E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182E420D8214900BF473E /* AppDelegate.m */; };
-		845182E820D8214900BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182E720D8214900BF473E /* ViewController.m */; };
 		845182EA20D8214A00BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845182E920D8214A00BF473E /* Assets.xcassets */; };
 		845182ED20D8214A00BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845182EB20D8214A00BF473E /* Main.storyboard */; };
 		845182F020D8214A00BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182EF20D8214A00BF473E /* main.m */; };
+		845182F720D821B300BF473E /* MBEMetalViewMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182F620D821B300BF473E /* MBEMetalViewMac.m */; };
+		845182F820D821DD00BF473E /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7A71BD598810006DDD8 /* MBEMetalView.m */; };
+		845182FB20D8222100BF473E /* MBEMetalViewIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182FA20D8222100BF473E /* MBEMetalViewIOS.m */; };
+		8451830020D8278F00BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7961BD597A30006DDD8 /* ViewController.m */; };
+		8451830120D827C800BF473E /* MBEMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7B11BD598810006DDD8 /* MBEMathUtilities.m */; };
+		8451830220D827C800BF473E /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7AC1BD598810006DDD8 /* MBERenderer.m */; };
+		8451830320D827DC00BF473E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7AD1BD598810006DDD8 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,13 +51,15 @@
 		845182E120D8214900BF473E /* Drawing in 3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drawing in 3D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845182E320D8214900BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		845182E420D8214900BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		845182E620D8214900BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		845182E720D8214900BF473E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		845182E920D8214A00BF473E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		845182EC20D8214A00BF473E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		845182EE20D8214A00BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845182EF20D8214A00BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845182F120D8214A00BF473E /* DrawingIn3D_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrawingIn3D_Mac.entitlements; sourceTree = "<group>"; };
+		845182F520D821B300BF473E /* MBEMetalViewMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewMac.h; sourceTree = "<group>"; };
+		845182F620D821B300BF473E /* MBEMetalViewMac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewMac.m; sourceTree = "<group>"; };
+		845182F920D8222100BF473E /* MBEMetalViewIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewIOS.h; sourceTree = "<group>"; };
+		845182FA20D8222100BF473E /* MBEMetalViewIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewIOS.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,20 +103,22 @@
 			children = (
 				83E2D7921BD597A30006DDD8 /* AppDelegate.h */,
 				83E2D7931BD597A30006DDD8 /* AppDelegate.m */,
-				83E2D7951BD597A30006DDD8 /* ViewController.h */,
-				83E2D7961BD597A30006DDD8 /* ViewController.m */,
+				83E2D79B1BD597A30006DDD8 /* Assets.xcassets */,
+				83E2D7A01BD597A30006DDD8 /* Info.plist */,
+				83E2D79D1BD597A30006DDD8 /* LaunchScreen.storyboard */,
+				83E2D7981BD597A30006DDD8 /* Main.storyboard */,
 				83E2D7B01BD598810006DDD8 /* MBEMathUtilities.h */,
 				83E2D7B11BD598810006DDD8 /* MBEMathUtilities.m */,
 				83E2D7A61BD598810006DDD8 /* MBEMetalView.h */,
 				83E2D7A71BD598810006DDD8 /* MBEMetalView.m */,
+				845182F920D8222100BF473E /* MBEMetalViewIOS.h */,
+				845182FA20D8222100BF473E /* MBEMetalViewIOS.m */,
 				83E2D7AB1BD598810006DDD8 /* MBERenderer.h */,
 				83E2D7AC1BD598810006DDD8 /* MBERenderer.m */,
 				83E2D7AD1BD598810006DDD8 /* Shaders.metal */,
-				83E2D7981BD597A30006DDD8 /* Main.storyboard */,
-				83E2D79B1BD597A30006DDD8 /* Assets.xcassets */,
-				83E2D79D1BD597A30006DDD8 /* LaunchScreen.storyboard */,
-				83E2D7A01BD597A30006DDD8 /* Info.plist */,
 				83E2D78F1BD597A30006DDD8 /* Supporting Files */,
+				83E2D7951BD597A30006DDD8 /* ViewController.h */,
+				83E2D7961BD597A30006DDD8 /* ViewController.m */,
 			);
 			path = DrawingIn3D;
 			sourceTree = "<group>";
@@ -126,13 +136,13 @@
 			children = (
 				845182E320D8214900BF473E /* AppDelegate.h */,
 				845182E420D8214900BF473E /* AppDelegate.m */,
-				845182E620D8214900BF473E /* ViewController.h */,
-				845182E720D8214900BF473E /* ViewController.m */,
 				845182E920D8214A00BF473E /* Assets.xcassets */,
-				845182EB20D8214A00BF473E /* Main.storyboard */,
+				845182F120D8214A00BF473E /* DrawingIn3D_Mac.entitlements */,
 				845182EE20D8214A00BF473E /* Info.plist */,
 				845182EF20D8214A00BF473E /* main.m */,
-				845182F120D8214A00BF473E /* DrawingIn3D_Mac.entitlements */,
+				845182EB20D8214A00BF473E /* Main.storyboard */,
+				845182F520D821B300BF473E /* MBEMetalViewMac.h */,
+				845182F620D821B300BF473E /* MBEMetalViewMac.m */,
 			);
 			path = "DrawingIn3D-Mac";
 			sourceTree = "<group>";
@@ -239,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E2D7971BD597A30006DDD8 /* ViewController.m in Sources */,
+				845182FB20D8222100BF473E /* MBEMetalViewIOS.m in Sources */,
 				83E2D7B61BD598810006DDD8 /* Shaders.metal in Sources */,
 				83E2D7941BD597A30006DDD8 /* AppDelegate.m in Sources */,
 				83E2D7B51BD598810006DDD8 /* MBERenderer.m in Sources */,
@@ -252,9 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845182E820D8214900BF473E /* ViewController.m in Sources */,
+				8451830320D827DC00BF473E /* Shaders.metal in Sources */,
+				8451830020D8278F00BF473E /* ViewController.m in Sources */,
+				8451830120D827C800BF473E /* MBEMathUtilities.m in Sources */,
 				845182F020D8214A00BF473E /* main.m in Sources */,
 				845182E520D8214900BF473E /* AppDelegate.m in Sources */,
+				8451830220D827C800BF473E /* MBERenderer.m in Sources */,
+				845182F820D821DD00BF473E /* MBEMetalView.m in Sources */,
+				845182F720D821B300BF473E /* MBEMetalViewMac.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
