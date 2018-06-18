@@ -15,6 +15,11 @@
 		83E2D7771BD188110006DDD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E2D7751BD188110006DDD8 /* LaunchScreen.storyboard */; };
 		83E2D7811BD188710006DDD8 /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D77F1BD188710006DDD8 /* MBEMetalView.m */; };
 		83E2D7821BD188710006DDD8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7801BD188710006DDD8 /* Shaders.metal */; };
+		845182C620D808C700BF473E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182C520D808C700BF473E /* AppDelegate.m */; };
+		845182C920D808C700BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182C820D808C700BF473E /* ViewController.m */; };
+		845182CB20D808C800BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845182CA20D808C800BF473E /* Assets.xcassets */; };
+		845182CE20D808C800BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845182CC20D808C800BF473E /* Main.storyboard */; };
+		845182D120D808C800BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182D020D808C800BF473E /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +36,27 @@
 		83E2D77E1BD188710006DDD8 /* MBEMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalView.h; sourceTree = "<group>"; };
 		83E2D77F1BD188710006DDD8 /* MBEMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalView.m; sourceTree = "<group>"; };
 		83E2D7801BD188710006DDD8 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		845182C220D808C700BF473E /* Drawing In 2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drawing In 2D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		845182C420D808C700BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		845182C520D808C700BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		845182C720D808C700BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		845182C820D808C700BF473E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		845182CA20D808C800BF473E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		845182CD20D808C800BF473E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		845182CF20D808C800BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845182D020D808C800BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845182D220D808C800BF473E /* DrawingIn2D_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrawingIn2D_Mac.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		83E2D7611BD188110006DDD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845182BF20D808C700BF473E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				83E2D7661BD188110006DDD8 /* DrawingIn2D */,
+				845182C320D808C700BF473E /* DrawingIn2D-Mac */,
 				83E2D7651BD188110006DDD8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				83E2D7641BD188110006DDD8 /* DrawingIn2D.app */,
+				845182C220D808C700BF473E /* Drawing In 2D.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +111,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		845182C320D808C700BF473E /* DrawingIn2D-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				845182C420D808C700BF473E /* AppDelegate.h */,
+				845182C520D808C700BF473E /* AppDelegate.m */,
+				845182C720D808C700BF473E /* ViewController.h */,
+				845182C820D808C700BF473E /* ViewController.m */,
+				845182CA20D808C800BF473E /* Assets.xcassets */,
+				845182CC20D808C800BF473E /* Main.storyboard */,
+				845182CF20D808C800BF473E /* Info.plist */,
+				845182D020D808C800BF473E /* main.m */,
+				845182D220D808C800BF473E /* DrawingIn2D_Mac.entitlements */,
+			);
+			path = "DrawingIn2D-Mac";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,6 +147,23 @@
 			productReference = 83E2D7641BD188110006DDD8 /* DrawingIn2D.app */;
 			productType = "com.apple.product-type.application";
 		};
+		845182C120D808C700BF473E /* DrawingIn2D-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845182D520D808C800BF473E /* Build configuration list for PBXNativeTarget "DrawingIn2D-Mac" */;
+			buildPhases = (
+				845182BE20D808C700BF473E /* Sources */,
+				845182BF20D808C700BF473E /* Frameworks */,
+				845182C020D808C700BF473E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DrawingIn2D-Mac";
+			productName = "DrawingIn2D-Mac";
+			productReference = 845182C220D808C700BF473E /* Drawing In 2D.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -118,6 +175,10 @@
 				TargetAttributes = {
 					83E2D7631BD188110006DDD8 = {
 						CreatedOnToolsVersion = 7.0;
+					};
+					845182C120D808C700BF473E = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -135,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				83E2D7631BD188110006DDD8 /* DrawingIn2D */,
+				845182C120D808C700BF473E /* DrawingIn2D-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -150,6 +212,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		845182C020D808C700BF473E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845182CB20D808C800BF473E /* Assets.xcassets in Resources */,
+				845182CE20D808C800BF473E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -162,6 +233,16 @@
 				83E2D7691BD188110006DDD8 /* main.m in Sources */,
 				83E2D7811BD188710006DDD8 /* MBEMetalView.m in Sources */,
 				83E2D7821BD188710006DDD8 /* Shaders.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845182BE20D808C700BF473E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845182C920D808C700BF473E /* ViewController.m in Sources */,
+				845182D120D808C800BF473E /* main.m in Sources */,
+				845182C620D808C700BF473E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +263,14 @@
 				83E2D7761BD188110006DDD8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		845182CC20D808C800BF473E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845182CD20D808C800BF473E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -313,6 +402,54 @@
 			};
 			name = Release;
 		};
+		845182D320D808C800BF473E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "DrawingIn2D-Mac/DrawingIn2D_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "DrawingIn2D-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.DrawingIn2D-Mac";
+				PRODUCT_NAME = "Drawing In 2D";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		845182D420D808C800BF473E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "DrawingIn2D-Mac/DrawingIn2D_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "DrawingIn2D-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.DrawingIn2D-Mac";
+				PRODUCT_NAME = "Drawing In 2D";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -330,6 +467,15 @@
 			buildConfigurations = (
 				83E2D77C1BD188110006DDD8 /* Debug */,
 				83E2D77D1BD188110006DDD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845182D520D808C800BF473E /* Build configuration list for PBXNativeTarget "DrawingIn2D-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845182D320D808C800BF473E /* Debug */,
+				845182D420D808C800BF473E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
