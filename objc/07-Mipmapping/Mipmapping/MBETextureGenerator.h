@@ -1,4 +1,5 @@
-@import UIKit;
+@import Foundation;
+@import CoreGraphics;
 @import Metal;
 
 @interface MBETextureGenerator : NSObject
