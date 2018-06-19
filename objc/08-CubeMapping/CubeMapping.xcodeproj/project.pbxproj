@@ -67,7 +67,7 @@
 		8362D1EB1A0D735800A6D9A8 /* MBERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBERenderer.h; sourceTree = "<group>"; };
 		8362D1EC1A0D735800A6D9A8 /* MBERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBERenderer.m; sourceTree = "<group>"; };
 		8362D1F01A0EA75F00A6D9A8 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		8451838520D932F000BF473E /* CubeMapping-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CubeMapping-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8451838520D932F000BF473E /* Cube Mapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cube Mapping.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8451838720D932F000BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8451838820D932F000BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8451838A20D932F000BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				8362D1A11A0D5BEB00A6D9A8 /* CubeMapping.app */,
-				8451838520D932F000BF473E /* CubeMapping-Mac.app */,
+				8451838520D932F000BF473E /* Cube Mapping.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			);
 			name = "CubeMapping-Mac";
 			productName = "CubeMapping-Mac";
-			productReference = 8451838520D932F000BF473E /* CubeMapping-Mac.app */;
+			productReference = 8451838520D932F000BF473E /* Cube Mapping.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -515,7 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.CubeMapping-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Cube Mapping";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -541,7 +541,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.CubeMapping-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Cube Mapping";
 				SDKROOT = macosx;
 			};
 			name = Release;
