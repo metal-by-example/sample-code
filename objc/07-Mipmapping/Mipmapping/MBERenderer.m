@@ -118,7 +118,7 @@ static const vector_float3 Y = { 0, 1, 0 };
                                               device:_device
                                           completion:^(id<MTLTexture> texture)
      {
-         _checkerTexture = texture;
+         self->_checkerTexture = texture;
      }];
     
     [MBETextureGenerator checkerboardTextureWithSize:textureSize
@@ -127,7 +127,7 @@ static const vector_float3 Y = { 0, 1, 0 };
                                               device:_device
                                           completion:^(id<MTLTexture> texture)
      {
-         _vibrantCheckerTexture = texture;
+         self->_vibrantCheckerTexture = texture;
      }];
     
     
@@ -143,6 +143,7 @@ static const vector_float3 Y = { 0, 1, 0 };
                                                                                            height:drawableSize.height
                                                                                         mipmapped:NO];
     depthTexDesc.usage = MTLTextureUsageRenderTarget;
+    depthTexDesc.storageMode = MTLStorageModePrivate;
     self.depthTexture = [self.device newTextureWithDescriptor:depthTexDesc];
 }
 

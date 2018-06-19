@@ -1,4 +1,4 @@
-@import UIKit;
+@import Foundation;
 @import QuartzCore.CAMetalLayer;
 @import Metal;
 

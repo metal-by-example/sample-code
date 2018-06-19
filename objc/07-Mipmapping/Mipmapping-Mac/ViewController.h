@@ -6,10 +6,13 @@
 //  Copyright © 2018 Metal By Example. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
+
+#import "MBEMetalView.h"
 
 @interface ViewController : NSViewController
 
+@property (nonatomic, readonly) MBEMetalView *metalView;
 
 @end
 

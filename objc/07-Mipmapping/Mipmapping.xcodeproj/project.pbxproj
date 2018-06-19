@@ -15,7 +15,7 @@
 		83A1BDEA1A365434005638E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A1BDE81A365434005638E2 /* LaunchScreen.xib */; };
 		83A1BE081A36759E005638E2 /* MBEMatrixUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE001A36759E005638E2 /* MBEMatrixUtilities.m */; };
 		83A1BE091A36759E005638E2 /* MBEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE021A36759E005638E2 /* MBEMesh.m */; };
-		83A1BE0A1A36759E005638E2 /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE041A36759E005638E2 /* MBEMetalView.m */; };
+		83A1BE0A1A36759E005638E2 /* MBEMetalViewIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE041A36759E005638E2 /* MBEMetalViewIOS.m */; };
 		83A1BE0B1A36759E005638E2 /* MBETextureGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE061A36759E005638E2 /* MBETextureGenerator.m */; };
 		83A1BE111A3675D7005638E2 /* MBECubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE101A3675D7005638E2 /* MBECubeMesh.m */; };
 		83A1BE141A37E584005638E2 /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE131A37E584005638E2 /* MBERenderer.m */; };
@@ -25,6 +25,15 @@
 		8451836220D91F9600BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8451836120D91F9600BF473E /* Assets.xcassets */; };
 		8451836520D91F9600BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8451836320D91F9600BF473E /* Main.storyboard */; };
 		8451836820D91F9600BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451836720D91F9600BF473E /* main.m */; };
+		8451837220D9226800BF473E /* MBEMetalViewMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451837020D9226800BF473E /* MBEMetalViewMac.m */; };
+		8451837520D9236E00BF473E /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451837420D9236E00BF473E /* MBEMetalView.m */; };
+		8451837620D9236E00BF473E /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451837420D9236E00BF473E /* MBEMetalView.m */; };
+		8451837820D9274300BF473E /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE131A37E584005638E2 /* MBERenderer.m */; };
+		8451837920D9274300BF473E /* MBEMatrixUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE001A36759E005638E2 /* MBEMatrixUtilities.m */; };
+		8451837A20D9274300BF473E /* MBETextureGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE061A36759E005638E2 /* MBETextureGenerator.m */; };
+		8451837E20D9306300BF473E /* MBECubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE101A3675D7005638E2 /* MBECubeMesh.m */; };
+		8451837F20D9306300BF473E /* MBEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE021A36759E005638E2 /* MBEMesh.m */; };
+		8451838020D9309500BF473E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE171A37ED7C005638E2 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +51,8 @@
 		83A1BE001A36759E005638E2 /* MBEMatrixUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMatrixUtilities.m; sourceTree = "<group>"; };
 		83A1BE011A36759E005638E2 /* MBEMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMesh.h; sourceTree = "<group>"; };
 		83A1BE021A36759E005638E2 /* MBEMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMesh.m; sourceTree = "<group>"; };
-		83A1BE031A36759E005638E2 /* MBEMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalView.h; sourceTree = "<group>"; };
-		83A1BE041A36759E005638E2 /* MBEMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalView.m; sourceTree = "<group>"; };
+		83A1BE031A36759E005638E2 /* MBEMetalViewIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewIOS.h; sourceTree = "<group>"; };
+		83A1BE041A36759E005638E2 /* MBEMetalViewIOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewIOS.m; sourceTree = "<group>"; };
 		83A1BE051A36759E005638E2 /* MBETextureGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBETextureGenerator.h; sourceTree = "<group>"; };
 		83A1BE061A36759E005638E2 /* MBETextureGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBETextureGenerator.m; sourceTree = "<group>"; };
 		83A1BE071A36759E005638E2 /* MBETypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBETypes.h; sourceTree = "<group>"; };
@@ -52,7 +61,7 @@
 		83A1BE121A37E584005638E2 /* MBERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBERenderer.h; sourceTree = "<group>"; };
 		83A1BE131A37E584005638E2 /* MBERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBERenderer.m; sourceTree = "<group>"; };
 		83A1BE171A37ED7C005638E2 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		8451835920D91F9600BF473E /* Mipmapping-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mipmapping-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8451835920D91F9600BF473E /* Mipmapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mipmapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8451835B20D91F9600BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8451835C20D91F9600BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8451835E20D91F9600BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -62,6 +71,10 @@
 		8451836620D91F9600BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8451836720D91F9600BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8451836920D91F9600BF473E /* Mipmapping_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mipmapping_Mac.entitlements; sourceTree = "<group>"; };
+		8451837020D9226800BF473E /* MBEMetalViewMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewMac.m; sourceTree = "<group>"; };
+		8451837120D9226800BF473E /* MBEMetalViewMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewMac.h; sourceTree = "<group>"; };
+		8451837320D9236E00BF473E /* MBEMetalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEMetalView.h; sourceTree = "<group>"; };
+		8451837420D9236E00BF473E /* MBEMetalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBEMetalView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				83A1BDD61A365434005638E2 /* Mipmapping.app */,
-				8451835920D91F9600BF473E /* Mipmapping-Mac.app */,
+				8451835920D91F9600BF473E /* Mipmapping.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,10 +157,12 @@
 		83A1BE161A37EBBC005638E2 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				83A1BE031A36759E005638E2 /* MBEMetalView.h */,
-				83A1BE041A36759E005638E2 /* MBEMetalView.m */,
 				83A1BDDD1A365434005638E2 /* AppDelegate.h */,
 				83A1BDDE1A365434005638E2 /* AppDelegate.m */,
+				8451837320D9236E00BF473E /* MBEMetalView.h */,
+				8451837420D9236E00BF473E /* MBEMetalView.m */,
+				83A1BE031A36759E005638E2 /* MBEMetalViewIOS.h */,
+				83A1BE041A36759E005638E2 /* MBEMetalViewIOS.m */,
 				83A1BDE01A365434005638E2 /* MBEViewController.h */,
 				83A1BDE11A365434005638E2 /* MBEViewController.m */,
 			);
@@ -159,13 +174,15 @@
 			children = (
 				8451835B20D91F9600BF473E /* AppDelegate.h */,
 				8451835C20D91F9600BF473E /* AppDelegate.m */,
-				8451835E20D91F9600BF473E /* ViewController.h */,
-				8451835F20D91F9600BF473E /* ViewController.m */,
 				8451836120D91F9600BF473E /* Assets.xcassets */,
-				8451836320D91F9600BF473E /* Main.storyboard */,
 				8451836620D91F9600BF473E /* Info.plist */,
 				8451836720D91F9600BF473E /* main.m */,
+				8451836320D91F9600BF473E /* Main.storyboard */,
+				8451837120D9226800BF473E /* MBEMetalViewMac.h */,
+				8451837020D9226800BF473E /* MBEMetalViewMac.m */,
 				8451836920D91F9600BF473E /* Mipmapping_Mac.entitlements */,
+				8451835E20D91F9600BF473E /* ViewController.h */,
+				8451835F20D91F9600BF473E /* ViewController.m */,
 			);
 			path = "Mipmapping-Mac";
 			sourceTree = "<group>";
@@ -204,7 +221,7 @@
 			);
 			name = "Mipmapping-Mac";
 			productName = "Mipmapping-Mac";
-			productReference = 8451835920D91F9600BF473E /* Mipmapping-Mac.app */;
+			productReference = 8451835920D91F9600BF473E /* Mipmapping.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -271,9 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8451837520D9236E00BF473E /* MBEMetalView.m in Sources */,
 				83A1BE111A3675D7005638E2 /* MBECubeMesh.m in Sources */,
 				83A1BE081A36759E005638E2 /* MBEMatrixUtilities.m in Sources */,
-				83A1BE0A1A36759E005638E2 /* MBEMetalView.m in Sources */,
+				83A1BE0A1A36759E005638E2 /* MBEMetalViewIOS.m in Sources */,
 				83A1BDE21A365434005638E2 /* MBEViewController.m in Sources */,
 				83A1BDDF1A365434005638E2 /* AppDelegate.m in Sources */,
 				83A1BDDC1A365434005638E2 /* main.m in Sources */,
@@ -291,6 +309,14 @@
 				8451836020D91F9600BF473E /* ViewController.m in Sources */,
 				8451836820D91F9600BF473E /* main.m in Sources */,
 				8451835D20D91F9600BF473E /* AppDelegate.m in Sources */,
+				8451837920D9274300BF473E /* MBEMatrixUtilities.m in Sources */,
+				8451837E20D9306300BF473E /* MBECubeMesh.m in Sources */,
+				8451837A20D9274300BF473E /* MBETextureGenerator.m in Sources */,
+				8451837820D9274300BF473E /* MBERenderer.m in Sources */,
+				8451837620D9236E00BF473E /* MBEMetalView.m in Sources */,
+				8451838020D9309500BF473E /* Shaders.metal in Sources */,
+				8451837220D9226800BF473E /* MBEMetalViewMac.m in Sources */,
+				8451837F20D9306300BF473E /* MBEMesh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.Mipmapping-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Mipmapping;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -495,7 +521,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.Mipmapping-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Mipmapping;
 				SDKROOT = macosx;
 			};
 			name = Release;
