@@ -20,6 +20,11 @@
 		83A1BE111A3675D7005638E2 /* MBECubeMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE101A3675D7005638E2 /* MBECubeMesh.m */; };
 		83A1BE141A37E584005638E2 /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE131A37E584005638E2 /* MBERenderer.m */; };
 		83A1BE181A37ED7C005638E2 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83A1BE171A37ED7C005638E2 /* Shaders.metal */; };
+		8451835D20D91F9600BF473E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451835C20D91F9600BF473E /* AppDelegate.m */; };
+		8451836020D91F9600BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451835F20D91F9600BF473E /* ViewController.m */; };
+		8451836220D91F9600BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8451836120D91F9600BF473E /* Assets.xcassets */; };
+		8451836520D91F9600BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8451836320D91F9600BF473E /* Main.storyboard */; };
+		8451836820D91F9600BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451836720D91F9600BF473E /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +52,27 @@
 		83A1BE121A37E584005638E2 /* MBERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBERenderer.h; sourceTree = "<group>"; };
 		83A1BE131A37E584005638E2 /* MBERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBERenderer.m; sourceTree = "<group>"; };
 		83A1BE171A37ED7C005638E2 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		8451835920D91F9600BF473E /* Mipmapping-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mipmapping-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8451835B20D91F9600BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8451835C20D91F9600BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8451835E20D91F9600BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8451835F20D91F9600BF473E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8451836120D91F9600BF473E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8451836420D91F9600BF473E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8451836620D91F9600BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8451836720D91F9600BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8451836920D91F9600BF473E /* Mipmapping_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mipmapping_Mac.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		83A1BDD31A365434005638E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8451835620D91F9600BF473E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				83A1BDD81A365434005638E2 /* Mipmapping */,
+				8451835A20D91F9600BF473E /* Mipmapping-Mac */,
 				83A1BDD71A365434005638E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				83A1BDD61A365434005638E2 /* Mipmapping.app */,
+				8451835920D91F9600BF473E /* Mipmapping-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +154,22 @@
 			name = "User Interface";
 			sourceTree = "<group>";
 		};
+		8451835A20D91F9600BF473E /* Mipmapping-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				8451835B20D91F9600BF473E /* AppDelegate.h */,
+				8451835C20D91F9600BF473E /* AppDelegate.m */,
+				8451835E20D91F9600BF473E /* ViewController.h */,
+				8451835F20D91F9600BF473E /* ViewController.m */,
+				8451836120D91F9600BF473E /* Assets.xcassets */,
+				8451836320D91F9600BF473E /* Main.storyboard */,
+				8451836620D91F9600BF473E /* Info.plist */,
+				8451836720D91F9600BF473E /* main.m */,
+				8451836920D91F9600BF473E /* Mipmapping_Mac.entitlements */,
+			);
+			path = "Mipmapping-Mac";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +190,23 @@
 			productReference = 83A1BDD61A365434005638E2 /* Mipmapping.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8451835820D91F9600BF473E /* Mipmapping-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8451836C20D91F9600BF473E /* Build configuration list for PBXNativeTarget "Mipmapping-Mac" */;
+			buildPhases = (
+				8451835520D91F9600BF473E /* Sources */,
+				8451835620D91F9600BF473E /* Frameworks */,
+				8451835720D91F9600BF473E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mipmapping-Mac";
+			productName = "Mipmapping-Mac";
+			productReference = 8451835920D91F9600BF473E /* Mipmapping-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,6 +218,10 @@
 				TargetAttributes = {
 					83A1BDD51A365434005638E2 = {
 						CreatedOnToolsVersion = 6.1.1;
+					};
+					8451835820D91F9600BF473E = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -178,6 +239,7 @@
 			projectRoot = "";
 			targets = (
 				83A1BDD51A365434005638E2 /* Mipmapping */,
+				8451835820D91F9600BF473E /* Mipmapping-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +252,15 @@
 				83A1BDE51A365434005638E2 /* Main.storyboard in Resources */,
 				83A1BDEA1A365434005638E2 /* LaunchScreen.xib in Resources */,
 				83A1BDE71A365434005638E2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8451835720D91F9600BF473E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8451836220D91F9600BF473E /* Assets.xcassets in Resources */,
+				8451836520D91F9600BF473E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +284,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8451835520D91F9600BF473E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8451836020D91F9600BF473E /* ViewController.m in Sources */,
+				8451836820D91F9600BF473E /* main.m in Sources */,
+				8451835D20D91F9600BF473E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -230,6 +311,14 @@
 				83A1BDE91A365434005638E2 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8451836320D91F9600BF473E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8451836420D91F9600BF473E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -360,6 +449,57 @@
 			};
 			name = Release;
 		};
+		8451836A20D91F9600BF473E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Mipmapping-Mac/Mipmapping_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Mipmapping-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.Mipmapping-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8451836B20D91F9600BF473E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Mipmapping-Mac/Mipmapping_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Mipmapping-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.Mipmapping-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,6 +517,15 @@
 			buildConfigurations = (
 				83A1BDFA1A365434005638E2 /* Debug */,
 				83A1BDFB1A365434005638E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8451836C20D91F9600BF473E /* Build configuration list for PBXNativeTarget "Mipmapping-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8451836A20D91F9600BF473E /* Debug */,
+				8451836B20D91F9600BF473E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
