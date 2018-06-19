@@ -34,6 +34,7 @@
         
         _layer = layer;
         _layer.device = _device;
+        _sceneOrientation = matrix_identity_float4x4;
     }
     return self;
 }
@@ -102,7 +103,7 @@
                                                    tubeSlices:32
                                                        device:self.device];
 
-    self.uniformBuffer = [self.device newBufferWithLength:sizeof(MBEUniforms) * 2
+    self.uniformBuffer = [self.device newBufferWithLength:self.uniformSize * 2
                                                   options:MTLResourceOptionCPUCacheModeDefault];
     
     MTLSamplerDescriptor *samplerDescriptor = [MTLSamplerDescriptor new];
@@ -119,6 +120,7 @@
                                                                                            height:drawableSize.height
                                                                                         mipmapped:NO];
     depthTexDesc.usage = MTLTextureUsageRenderTarget;
+    depthTexDesc.storageMode = MTLStorageModePrivate;
     self.depthTexture = [self.device newTextureWithDescriptor:depthTexDesc];
 }
 
@@ -154,8 +156,8 @@
     [commandEncoder setRenderPipelineState:self.useRefractionMaterial ? self.torusRefractPipeline : self.torusReflectPipeline];
     [commandEncoder setDepthStencilState:depthState];
     [commandEncoder setVertexBuffer:self.torus.vertexBuffer offset:0 atIndex:0];
-    [commandEncoder setVertexBuffer:self.uniformBuffer offset:sizeof(MBEUniforms) atIndex:1];
-    [commandEncoder setFragmentBuffer:self.uniformBuffer offset:sizeof(MBEUniforms) atIndex:0];
+    [commandEncoder setVertexBuffer:self.uniformBuffer offset:self.uniformSize atIndex:1];
+    [commandEncoder setFragmentBuffer:self.uniformBuffer offset:self.uniformSize atIndex:0];
     [commandEncoder setFragmentTexture:self.cubeTexture atIndex:0];
     [commandEncoder setFragmentSamplerState:self.samplerState atIndex:0];
     
@@ -205,7 +207,7 @@
     skyboxUniforms.normalMatrix = matrix_transpose(matrix_invert(skyboxUniforms.modelMatrix));
     skyboxUniforms.modelViewProjectionMatrix = matrix_multiply(projectionMatrix, matrix_multiply(skyboxViewMatrix, modelMatrix));
     skyboxUniforms.worldCameraPosition = worldCameraPosition;
-    memcpy(self.uniformBuffer.contents, &skyboxUniforms, sizeof(MBEUniforms));
+    memcpy(self.uniformBuffer.contents, &skyboxUniforms, self.uniformSize);
 
     MBEUniforms torusUniforms;
     torusUniforms.modelMatrix = modelMatrix;
@@ -213,7 +215,7 @@
     torusUniforms.normalMatrix = matrix_transpose(matrix_invert(torusUniforms.modelMatrix));
     torusUniforms.modelViewProjectionMatrix = matrix_multiply(projectionMatrix, matrix_multiply(torusViewMatrix, modelMatrix));
     torusUniforms.worldCameraPosition = worldCameraPosition;
-    memcpy(self.uniformBuffer.contents + sizeof(MBEUniforms), &torusUniforms, sizeof(MBEUniforms));
+    memcpy(self.uniformBuffer.contents + self.uniformSize, &torusUniforms, self.uniformSize);
 }
 
 - (void)draw
@@ -245,6 +247,15 @@
         [commandBuffer presentDrawable:drawable];
         [commandBuffer commit];
     }
+}
+
+- (NSUInteger)uniformSize
+{
+    NSUInteger size = sizeof(MBEUniforms);
+#if TARGET_OS_MAC
+    size = (((NSUInteger)((CGFloat)(size - 1) / 256.0f) + 1) * 256);
+#endif
+    return size;
 }
 
 @end

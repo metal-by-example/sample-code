@@ -32,6 +32,22 @@
 		8451838E20D932F000BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8451838D20D932F000BF473E /* Assets.xcassets */; };
 		8451839120D932F000BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8451838F20D932F000BF473E /* Main.storyboard */; };
 		8451839420D932F000BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451839320D932F000BF473E /* main.m */; };
+		8451839920D9337C00BF473E /* nx.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1DC1A0D6B6E00A6D9A8 /* nx.png */; };
+		8451839A20D9337C00BF473E /* ny.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1DD1A0D6B6E00A6D9A8 /* ny.png */; };
+		8451839B20D9337C00BF473E /* nz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1DE1A0D6B6E00A6D9A8 /* nz.png */; };
+		8451839C20D9337C00BF473E /* px.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1DF1A0D6B6E00A6D9A8 /* px.png */; };
+		8451839D20D9337C00BF473E /* py.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1E01A0D6B6E00A6D9A8 /* py.png */; };
+		8451839E20D9337C00BF473E /* pz.png in Resources */ = {isa = PBXBuildFile; fileRef = 8362D1E11A0D6B6E00A6D9A8 /* pz.png */; };
+		8451839F20D9339700BF473E /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1EC1A0D735800A6D9A8 /* MBERenderer.m */; };
+		845183A020D9339700BF473E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1F01A0EA75F00A6D9A8 /* Shaders.metal */; };
+		845183A120D9339700BF473E /* MBEMatrixUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 832493251A1196B7001E2340 /* MBEMatrixUtilities.m */; };
+		845183A220D9339700BF473E /* MBETextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1E91A0D6BE500A6D9A8 /* MBETextureLoader.m */; };
+		845183A320D9339700BF473E /* MBEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 832493221A116424001E2340 /* MBEMesh.m */; };
+		845183A420D9339700BF473E /* MBESkyboxMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 834B3CD51A0F1628009646DA /* MBESkyboxMesh.m */; };
+		845183A520D9339700BF473E /* MBETorusKnotMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 8324931F1A113520001E2340 /* MBETorusKnotMesh.m */; };
+		845183A820D934AD00BF473E /* MBEMetalViewMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 845183A620D934AD00BF473E /* MBEMetalViewMac.m */; };
+		845183AB20D9354400BF473E /* MBEMetalViewIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 845183A920D9354400BF473E /* MBEMetalViewIOS.m */; };
+		845183AC20D9356200BF473E /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1CB1A0D653900A6D9A8 /* MBEMetalView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +93,10 @@
 		8451839220D932F000BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8451839320D932F000BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8451839520D932F000BF473E /* CubeMapping_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CubeMapping_Mac.entitlements; sourceTree = "<group>"; };
+		845183A620D934AD00BF473E /* MBEMetalViewMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBEMetalViewMac.m; path = "../../07-Mipmapping/Mipmapping-Mac/MBEMetalViewMac.m"; sourceTree = "<group>"; };
+		845183A720D934AD00BF473E /* MBEMetalViewMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBEMetalViewMac.h; path = "../../07-Mipmapping/Mipmapping-Mac/MBEMetalViewMac.h"; sourceTree = "<group>"; };
+		845183A920D9354400BF473E /* MBEMetalViewIOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewIOS.m; sourceTree = "<group>"; };
+		845183AA20D9354400BF473E /* MBEMetalViewIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewIOS.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +154,8 @@
 				832493271A119747001E2340 /* MBETypes.h */,
 				8362D1CA1A0D653900A6D9A8 /* MBEMetalView.h */,
 				8362D1CB1A0D653900A6D9A8 /* MBEMetalView.m */,
+				845183AA20D9354400BF473E /* MBEMetalViewIOS.h */,
+				845183A920D9354400BF473E /* MBEMetalViewIOS.m */,
 				8362D1AB1A0D5BEB00A6D9A8 /* MBEViewController.h */,
 				8362D1AC1A0D5BEB00A6D9A8 /* MBEViewController.m */,
 				8362D1EB1A0D735800A6D9A8 /* MBERenderer.h */,
@@ -198,13 +220,15 @@
 			children = (
 				8451838720D932F000BF473E /* AppDelegate.h */,
 				8451838820D932F000BF473E /* AppDelegate.m */,
-				8451838A20D932F000BF473E /* ViewController.h */,
-				8451838B20D932F000BF473E /* ViewController.m */,
 				8451838D20D932F000BF473E /* Assets.xcassets */,
-				8451838F20D932F000BF473E /* Main.storyboard */,
+				8451839520D932F000BF473E /* CubeMapping_Mac.entitlements */,
 				8451839220D932F000BF473E /* Info.plist */,
 				8451839320D932F000BF473E /* main.m */,
-				8451839520D932F000BF473E /* CubeMapping_Mac.entitlements */,
+				8451838F20D932F000BF473E /* Main.storyboard */,
+				845183A720D934AD00BF473E /* MBEMetalViewMac.h */,
+				845183A620D934AD00BF473E /* MBEMetalViewMac.m */,
+				8451838A20D932F000BF473E /* ViewController.h */,
+				8451838B20D932F000BF473E /* ViewController.m */,
 			);
 			path = "CubeMapping-Mac";
 			sourceTree = "<group>";
@@ -304,6 +328,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8451839920D9337C00BF473E /* nx.png in Resources */,
+				8451839A20D9337C00BF473E /* ny.png in Resources */,
+				8451839B20D9337C00BF473E /* nz.png in Resources */,
+				8451839C20D9337C00BF473E /* px.png in Resources */,
+				8451839D20D9337C00BF473E /* py.png in Resources */,
+				8451839E20D9337C00BF473E /* pz.png in Resources */,
 				8451838E20D932F000BF473E /* Assets.xcassets in Resources */,
 				8451839120D932F000BF473E /* Main.storyboard in Resources */,
 			);
@@ -321,6 +351,7 @@
 				832493231A116424001E2340 /* MBEMesh.m in Sources */,
 				8362D1ED1A0D735800A6D9A8 /* MBERenderer.m in Sources */,
 				8362D1AD1A0D5BEB00A6D9A8 /* MBEViewController.m in Sources */,
+				845183AB20D9354400BF473E /* MBEMetalViewIOS.m in Sources */,
 				832493261A1196B7001E2340 /* MBEMatrixUtilities.m in Sources */,
 				8362D1AA1A0D5BEB00A6D9A8 /* AppDelegate.m in Sources */,
 				8362D1A71A0D5BEB00A6D9A8 /* main.m in Sources */,
@@ -334,9 +365,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845183A420D9339700BF473E /* MBESkyboxMesh.m in Sources */,
 				8451838C20D932F000BF473E /* ViewController.m in Sources */,
 				8451839420D932F000BF473E /* main.m in Sources */,
+				845183A120D9339700BF473E /* MBEMatrixUtilities.m in Sources */,
 				8451838920D932F000BF473E /* AppDelegate.m in Sources */,
+				8451839F20D9339700BF473E /* MBERenderer.m in Sources */,
+				845183A320D9339700BF473E /* MBEMesh.m in Sources */,
+				845183AC20D9356200BF473E /* MBEMetalView.m in Sources */,
+				845183A520D9339700BF473E /* MBETorusKnotMesh.m in Sources */,
+				845183A820D934AD00BF473E /* MBEMetalViewMac.m in Sources */,
+				845183A220D9339700BF473E /* MBETextureLoader.m in Sources */,
+				845183A020D9339700BF473E /* Shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
