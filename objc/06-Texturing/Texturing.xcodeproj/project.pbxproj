@@ -22,7 +22,6 @@
 		839E18FF1BE3495400944528 /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18F71BE3495400944528 /* MBERenderer.m */; };
 		839E19021BE3497A00944528 /* MBEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E19011BE3497A00944528 /* MBEMaterial.m */; };
 		839E190C1BE349AD00944528 /* moo.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 839E19041BE349AC00944528 /* moo.aiff */; };
-		839E190D1BE349AD00944528 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 839E19051BE349AC00944528 /* README.txt */; };
 		839E190E1BE349AD00944528 /* spot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 839E19061BE349AC00944528 /* spot.obj */; };
 		839E19111BE349AD00944528 /* spot_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E19091BE349AD00944528 /* spot_texture.png */; };
 		839E19191BE3583B00944528 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 839E19181BE3583B00944528 /* Shaders.metal */; };
@@ -282,7 +281,6 @@
 				839E190E1BE349AD00944528 /* spot.obj in Resources */,
 				839E190C1BE349AD00944528 /* moo.aiff in Resources */,
 				839E19111BE349AD00944528 /* spot_texture.png in Resources */,
-				839E190D1BE349AD00944528 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
