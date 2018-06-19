@@ -27,6 +27,11 @@
 		8362D1EA1A0D6BE500A6D9A8 /* MBETextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1E91A0D6BE500A6D9A8 /* MBETextureLoader.m */; };
 		8362D1ED1A0D735800A6D9A8 /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1EC1A0D735800A6D9A8 /* MBERenderer.m */; };
 		8362D1F11A0EA75F00A6D9A8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8362D1F01A0EA75F00A6D9A8 /* Shaders.metal */; };
+		8451838920D932F000BF473E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451838820D932F000BF473E /* AppDelegate.m */; };
+		8451838C20D932F000BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451838B20D932F000BF473E /* ViewController.m */; };
+		8451838E20D932F000BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8451838D20D932F000BF473E /* Assets.xcassets */; };
+		8451839120D932F000BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8451838F20D932F000BF473E /* Main.storyboard */; };
+		8451839420D932F000BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451839320D932F000BF473E /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,10 +67,27 @@
 		8362D1EB1A0D735800A6D9A8 /* MBERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBERenderer.h; sourceTree = "<group>"; };
 		8362D1EC1A0D735800A6D9A8 /* MBERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBERenderer.m; sourceTree = "<group>"; };
 		8362D1F01A0EA75F00A6D9A8 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		8451838520D932F000BF473E /* CubeMapping-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CubeMapping-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8451838720D932F000BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8451838820D932F000BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8451838A20D932F000BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8451838B20D932F000BF473E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8451838D20D932F000BF473E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8451839020D932F000BF473E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8451839220D932F000BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8451839320D932F000BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8451839520D932F000BF473E /* CubeMapping_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CubeMapping_Mac.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8362D19E1A0D5BEB00A6D9A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8451838220D932F000BF473E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				8362D1A31A0D5BEB00A6D9A8 /* CubeMapping */,
+				8451838620D932F000BF473E /* CubeMapping-Mac */,
 				8362D1A21A0D5BEB00A6D9A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				8362D1A11A0D5BEB00A6D9A8 /* CubeMapping.app */,
+				8451838520D932F000BF473E /* CubeMapping-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +193,22 @@
 			name = "User Interface";
 			sourceTree = "<group>";
 		};
+		8451838620D932F000BF473E /* CubeMapping-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				8451838720D932F000BF473E /* AppDelegate.h */,
+				8451838820D932F000BF473E /* AppDelegate.m */,
+				8451838A20D932F000BF473E /* ViewController.h */,
+				8451838B20D932F000BF473E /* ViewController.m */,
+				8451838D20D932F000BF473E /* Assets.xcassets */,
+				8451838F20D932F000BF473E /* Main.storyboard */,
+				8451839220D932F000BF473E /* Info.plist */,
+				8451839320D932F000BF473E /* main.m */,
+				8451839520D932F000BF473E /* CubeMapping_Mac.entitlements */,
+			);
+			path = "CubeMapping-Mac";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +229,23 @@
 			productReference = 8362D1A11A0D5BEB00A6D9A8 /* CubeMapping.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8451838420D932F000BF473E /* CubeMapping-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8451839820D932F000BF473E /* Build configuration list for PBXNativeTarget "CubeMapping-Mac" */;
+			buildPhases = (
+				8451838120D932F000BF473E /* Sources */,
+				8451838220D932F000BF473E /* Frameworks */,
+				8451838320D932F000BF473E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CubeMapping-Mac";
+			productName = "CubeMapping-Mac";
+			productReference = 8451838520D932F000BF473E /* CubeMapping-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,6 +257,10 @@
 				TargetAttributes = {
 					8362D1A01A0D5BEB00A6D9A8 = {
 						CreatedOnToolsVersion = 6.1;
+					};
+					8451838420D932F000BF473E = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -217,6 +278,7 @@
 			projectRoot = "";
 			targets = (
 				8362D1A01A0D5BEB00A6D9A8 /* CubeMapping */,
+				8451838420D932F000BF473E /* CubeMapping-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +297,15 @@
 				8362D1B51A0D5BEB00A6D9A8 /* LaunchScreen.xib in Resources */,
 				8362D1E41A0D6B6E00A6D9A8 /* nz.png in Resources */,
 				8362D1B21A0D5BEB00A6D9A8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8451838320D932F000BF473E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8451838E20D932F000BF473E /* Assets.xcassets in Resources */,
+				8451839120D932F000BF473E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +330,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8451838120D932F000BF473E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8451838C20D932F000BF473E /* ViewController.m in Sources */,
+				8451839420D932F000BF473E /* main.m in Sources */,
+				8451838920D932F000BF473E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -276,6 +357,14 @@
 				8362D1B41A0D5BEB00A6D9A8 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8451838F20D932F000BF473E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8451839020D932F000BF473E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -406,6 +495,57 @@
 			};
 			name = Release;
 		};
+		8451839620D932F000BF473E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "CubeMapping-Mac/CubeMapping_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "CubeMapping-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.CubeMapping-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8451839720D932F000BF473E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "CubeMapping-Mac/CubeMapping_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "CubeMapping-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.CubeMapping-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -423,6 +563,15 @@
 			buildConfigurations = (
 				8362D1C51A0D5BEB00A6D9A8 /* Debug */,
 				8362D1C61A0D5BEB00A6D9A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8451839820D932F000BF473E /* Build configuration list for PBXNativeTarget "CubeMapping-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8451839620D932F000BF473E /* Debug */,
+				8451839720D932F000BF473E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
