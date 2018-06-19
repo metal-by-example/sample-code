@@ -1,5 +1,19 @@
 #import "MBETextureLoader.h"
 
+#if TARGET_OS_IPHONE
+@import UIKit;
+#define NSUIImage UIImage
+
+#else
+@import AppKit;
+#define NSUIImage NSImage
+
+@interface NSImage (Scale)
+@property (nonatomic, readonly) CGFloat scale;
+@property (nonatomic, readonly) CGImageRef CGImage;
+@end
+#endif
+
 @implementation MBETextureLoader
 
 + (instancetype)sharedTextureLoader
@@ -16,7 +30,7 @@
                                 mipmapped:(BOOL)mipmapped
                              commandQueue:(id<MTLCommandQueue>)queue
 {
-    UIImage *image = [UIImage imageNamed:imageName];
+    NSUIImage *image = [NSUIImage imageNamed:imageName];
 
     if (image == nil)
     {
@@ -50,7 +64,7 @@
     return texture;
 }
 
-- (uint8_t *)dataForImage:(UIImage *)image
+- (uint8_t *)dataForImage:(NSUIImage *)image
 {
     CGImageRef imageRef = image.CGImage;
     
@@ -91,3 +105,16 @@
 }
 
 @end
+
+#if TARGET_OS_MAC
+@implementation NSImage (Scale)
+
+- (CGFloat)scale { return 1.0; }
+
+- (CGImageRef)CGImage {
+    return [self CGImageForProposedRect:NULL context:NULL hints:nil];
+}
+
+@end
+#endif
+

@@ -27,10 +27,24 @@
 		839E19191BE3583B00944528 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 839E19181BE3583B00944528 /* Shaders.metal */; };
 		839E191C1BE3596D00944528 /* MBETextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E191B1BE3596D00944528 /* MBETextureLoader.m */; };
 		8451833420D918BA00BF473E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451833320D918BA00BF473E /* AppDelegate.m */; };
-		8451833720D918BA00BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451833620D918BA00BF473E /* ViewController.m */; };
 		8451833920D918BB00BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8451833820D918BB00BF473E /* Assets.xcassets */; };
 		8451833C20D918BB00BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8451833A20D918BB00BF473E /* Main.storyboard */; };
 		8451833F20D918BB00BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451833E20D918BB00BF473E /* main.m */; };
+		8451834420D919E200BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18DA1BE348B800944528 /* ViewController.m */; };
+		8451834520D919F100BF473E /* moo.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 839E19041BE349AC00944528 /* moo.aiff */; };
+		8451834620D91A6E00BF473E /* spot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 839E19061BE349AC00944528 /* spot.obj */; };
+		8451834720D91A7A00BF473E /* spot_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E19091BE349AD00944528 /* spot_texture.png */; };
+		8451834820D91A9300BF473E /* MBEMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18EB1BE3495400944528 /* MBEMathUtilities.m */; };
+		8451834920D91A9300BF473E /* MBEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E19011BE3497A00944528 /* MBEMaterial.m */; };
+		8451834A20D91A9300BF473E /* MBEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18ED1BE3495400944528 /* MBEMesh.m */; };
+		8451834B20D91A9300BF473E /* MBETextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E191B1BE3596D00944528 /* MBETextureLoader.m */; };
+		8451834C20D91A9300BF473E /* MBEOBJGroup.mm in Sources */ = {isa = PBXBuildFile; fileRef = 839E18F11BE3495400944528 /* MBEOBJGroup.mm */; };
+		8451834D20D91A9300BF473E /* MBEOBJMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18F31BE3495400944528 /* MBEOBJMesh.m */; };
+		8451834E20D91A9300BF473E /* MBEOBJModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 839E18F51BE3495400944528 /* MBEOBJModel.mm */; };
+		8451834F20D91A9300BF473E /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18F71BE3495400944528 /* MBERenderer.m */; };
+		8451835020D91A9E00BF473E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 839E19181BE3583B00944528 /* Shaders.metal */; };
+		8451835320D91D9700BF473E /* MBEMetalViewMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451835220D91D9700BF473E /* MBEMetalViewMac.m */; };
+		8451835420D91DAF00BF473E /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 839E18EF1BE3495400944528 /* MBEMetalView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,13 +89,13 @@
 		8451833020D918BA00BF473E /* Texturing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Texturing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8451833220D918BA00BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8451833320D918BA00BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8451833520D918BA00BF473E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8451833620D918BA00BF473E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8451833820D918BB00BF473E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8451833B20D918BB00BF473E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8451833D20D918BB00BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8451833E20D918BB00BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8451834020D918BB00BF473E /* Texturing_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Texturing_Mac.entitlements; sourceTree = "<group>"; };
+		8451835120D91D9700BF473E /* MBEMetalViewMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewMac.h; sourceTree = "<group>"; };
+		8451835220D91D9700BF473E /* MBEMetalViewMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewMac.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,12 +199,12 @@
 			children = (
 				8451833220D918BA00BF473E /* AppDelegate.h */,
 				8451833320D918BA00BF473E /* AppDelegate.m */,
-				8451833520D918BA00BF473E /* ViewController.h */,
-				8451833620D918BA00BF473E /* ViewController.m */,
 				8451833820D918BB00BF473E /* Assets.xcassets */,
-				8451833A20D918BB00BF473E /* Main.storyboard */,
 				8451833D20D918BB00BF473E /* Info.plist */,
 				8451833E20D918BB00BF473E /* main.m */,
+				8451833A20D918BB00BF473E /* Main.storyboard */,
+				8451835120D91D9700BF473E /* MBEMetalViewMac.h */,
+				8451835220D91D9700BF473E /* MBEMetalViewMac.m */,
 				8451834020D918BB00BF473E /* Texturing_Mac.entitlements */,
 			);
 			path = "Texturing-Mac";
@@ -288,8 +302,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8451834720D91A7A00BF473E /* spot_texture.png in Resources */,
+				8451834620D91A6E00BF473E /* spot.obj in Resources */,
 				8451833920D918BB00BF473E /* Assets.xcassets in Resources */,
 				8451833C20D918BB00BF473E /* Main.storyboard in Resources */,
+				8451834520D919F100BF473E /* moo.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +337,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8451833720D918BA00BF473E /* ViewController.m in Sources */,
+				8451835020D91A9E00BF473E /* Shaders.metal in Sources */,
+				8451835420D91DAF00BF473E /* MBEMetalView.m in Sources */,
+				8451834F20D91A9300BF473E /* MBERenderer.m in Sources */,
+				8451834920D91A9300BF473E /* MBEMaterial.m in Sources */,
+				8451834420D919E200BF473E /* ViewController.m in Sources */,
+				8451834C20D91A9300BF473E /* MBEOBJGroup.mm in Sources */,
 				8451833F20D918BB00BF473E /* main.m in Sources */,
+				8451834E20D91A9300BF473E /* MBEOBJModel.mm in Sources */,
 				8451833420D918BA00BF473E /* AppDelegate.m in Sources */,
+				8451834820D91A9300BF473E /* MBEMathUtilities.m in Sources */,
+				8451835320D91D9700BF473E /* MBEMetalViewMac.m in Sources */,
+				8451834B20D91A9300BF473E /* MBETextureLoader.m in Sources */,
+				8451834A20D91A9300BF473E /* MBEMesh.m in Sources */,
+				8451834D20D91A9300BF473E /* MBEOBJMesh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
