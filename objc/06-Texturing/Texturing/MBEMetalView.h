@@ -1,10 +1,18 @@
+#import <TargetConditionals.h>
+
+#if TARGET_OS_IPHONE
 @import UIKit;
+#define NSUIView UIView;
+#else
+@import AppKit;
+#define NSUIView NSView;
+#endif
 @import Metal;
 @import QuartzCore.CAMetalLayer;
 
 @protocol MBEMetalViewDelegate;
 
-@interface MBEMetalView : UIView
+@interface MBEMetalView : NSUIView
 
 /// The delegate of this view, responsible for drawing
 @property (nonatomic, weak) id<MBEMetalViewDelegate> delegate;
@@ -35,6 +43,14 @@
 /// as its primary color attachment and an internal depth texture of the same
 /// size as its depth attachment's texture
 @property (nonatomic, readonly) MTLRenderPassDescriptor *currentRenderPassDescriptor;
+
+@property (strong) id<MTLTexture> depthTexture;
+
+// Subclass override points
+@property (nonatomic, readonly) CGSize drawableSize;
+
+- (void)makeDepthTexture;
+- (void)renderWithDuration:(NSTimeInterval)duration;
 
 @end
 
