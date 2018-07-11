@@ -1,5 +1,6 @@
 #import "MBEMesh.h"
 @import Metal;
+@import CoreGraphics;
 
 @interface MBETorusKnotMesh : MBEMesh
 

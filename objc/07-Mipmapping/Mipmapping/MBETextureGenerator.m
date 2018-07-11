@@ -1,5 +1,13 @@
 #import "MBETextureGenerator.h"
 
+#if TARGET_OS_IPHONE
+@import UIKit;
+#define NSUIColor UIColor
+#else
+@import AppKit;
+#define NSUIColor NSColor
+#endif
+
 static const NSUInteger bytesPerPixel = 4;
 
 @implementation MBETextureGenerator
@@ -109,7 +117,7 @@ static const NSUInteger bytesPerPixel = 4;
     {
         NSUInteger mipBytesPerRow = bytesPerPixel * mipWidth;
         
-        UIColor *tintColor = [self tintColorAtIndex:level - 1];
+        NSUIColor *tintColor = [self tintColorAtIndex:level - 1];
         NSData *mipData = [self createResizedImageDataForImage:image
                                                           size:CGSizeMake(mipWidth, mipHeight)
                                                      tintColor:tintColor
@@ -148,7 +156,7 @@ static const NSUInteger bytesPerPixel = 4;
 
 + (NSData *)createResizedImageDataForImage:(CGImageRef)image
                                       size:(CGSize)size
-                                 tintColor:(UIColor *)tintColor
+                                 tintColor:(NSUIColor *)tintColor
                                      image:(CGImageRef *)outImage
 {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
@@ -191,24 +199,24 @@ static const NSUInteger bytesPerPixel = 4;
     return [NSData dataWithBytesNoCopy:data length:dataLength freeWhenDone:YES];
 }
 
-+ (UIColor *)tintColorAtIndex:(size_t)index
++ (NSUIColor *)tintColorAtIndex:(size_t)index
 {
     switch (index % 7) {
         case 0:
-            return [UIColor redColor];
+            return [NSUIColor redColor];
         case 1:
-            return [UIColor orangeColor];
+            return [NSUIColor orangeColor];
         case 2:
-            return [UIColor yellowColor];
+            return [NSUIColor yellowColor];
         case 3:
-            return [UIColor greenColor];
+            return [NSUIColor greenColor];
         case 4:
-            return [UIColor blueColor];
+            return [NSUIColor blueColor];
         case 5:
-            return [UIColor colorWithRed:0.5 green:0.0 blue:1.0 alpha:1.0]; // indigo
+            return [NSUIColor colorWithRed:0.5 green:0.0 blue:1.0 alpha:1.0]; // indigo
         case 6:
         default:
-            return [UIColor purpleColor];
+            return [NSUIColor purpleColor];
     }
 }
 

@@ -81,7 +81,7 @@ static const NSInteger MBEInFlightBufferCount = 3;
     _mesh = [[MBEOBJMesh alloc] initWithGroup:group device:_device];
 
     // create uniform storage
-    _uniformBuffer = [self.device newBufferWithLength:sizeof(MBEUniforms) * MBEInFlightBufferCount
+    _uniformBuffer = [self.device newBufferWithLength:self.uniformSize * MBEInFlightBufferCount
                                               options:MTLResourceOptionCPUCacheModeDefault];
     [_uniformBuffer setLabel:@"Uniforms"];
 
@@ -120,7 +120,7 @@ static const NSInteger MBEInFlightBufferCount = 3;
     uniforms.modelViewProjectionMatrix = matrix_multiply(projectionMatrix, uniforms.modelViewMatrix);
     uniforms.normalMatrix = matrix_float4x4_extract_linear(uniforms.modelViewMatrix);
 
-    const NSUInteger uniformBufferOffset = sizeof(MBEUniforms) * self.bufferIndex;
+    const NSUInteger uniformBufferOffset = self.uniformSize * self.bufferIndex;
     memcpy([self.uniformBuffer contents] + uniformBufferOffset, &uniforms, sizeof(uniforms));
 }
 
@@ -144,7 +144,7 @@ static const NSInteger MBEInFlightBufferCount = 3;
         [renderPass setFrontFacingWinding:MTLWindingCounterClockwise];
         [renderPass setCullMode:MTLCullModeBack];
 
-        const NSUInteger uniformBufferOffset = sizeof(MBEUniforms) * self.bufferIndex;
+    const NSUInteger uniformBufferOffset = self.uniformSize * self.bufferIndex;
 
         [renderPass setVertexBuffer:self.mesh.vertexBuffer offset:0 atIndex:0];
         [renderPass setVertexBuffer:self.uniformBuffer offset:uniformBufferOffset atIndex:1];
@@ -169,6 +169,15 @@ static const NSInteger MBEInFlightBufferCount = 3;
         
         [commandBuffer commit];
     }
+}
+
+- (NSUInteger)uniformSize
+{
+    NSUInteger size = sizeof(MBEUniforms);
+#if TARGET_OS_MAC
+    size = (((NSUInteger)((CGFloat)(size - 1) / 256.0f) + 1) * 256);
+#endif
+    return size;
 }
 
 @end

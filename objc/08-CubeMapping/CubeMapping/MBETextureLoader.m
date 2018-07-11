@@ -1,8 +1,22 @@
 #import "MBETextureLoader.h"
 
+#if TARGET_OS_IPHONE
+@import UIKit;
+#define NSUIImage UIImage
+
+#else
+@import AppKit;
+#define NSUIImage NSImage
+
+@interface NSImage (Scale)
+@property (nonatomic, readonly) CGFloat scale;
+@property (nonatomic, readonly) CGImageRef CGImage;
+@end
+#endif
+
 @implementation MBETextureLoader
 
-+ (uint8_t *)dataForImage:(UIImage *)image
++ (uint8_t *)dataForImage:(NSUIImage *)image
 {
     CGImageRef imageRef = [image CGImage];
     
@@ -27,7 +41,7 @@
 
 + (id<MTLTexture>)texture2DWithImageNamed:(NSString *)imageName device:(id<MTLDevice>)device
 {
-    UIImage *image = [UIImage imageNamed:imageName];
+    NSUIImage *image = [NSUIImage imageNamed:imageName];
     CGSize imageSize = CGSizeMake(image.size.width * image.scale, image.size.height * image.scale);
     const NSUInteger bytesPerPixel = 4;
     const NSUInteger bytesPerRow = bytesPerPixel * imageSize.width;
@@ -51,7 +65,7 @@
 {
     NSAssert(imageNameArray.count == 6, @"Cube texture can only be created from exactly six images");
     
-    UIImage *firstImage = [UIImage imageNamed:[imageNameArray firstObject]];
+    NSUIImage *firstImage = [NSUIImage imageNamed:[imageNameArray firstObject]];
     const CGFloat cubeSize = firstImage.size.width * firstImage.scale;
     
     const NSUInteger bytesPerPixel = 4;
@@ -69,7 +83,7 @@
     for (size_t slice = 0; slice < 6; ++slice)
     {
         NSString *imageName = imageNameArray[slice];
-        UIImage *image = [UIImage imageNamed:imageName];
+        NSUIImage *image = [NSUIImage imageNamed:imageName];
         uint8_t *imageData = [self dataForImage:image];
         
         NSAssert(image.size.width == cubeSize && image.size.height == cubeSize, @"Cube map images must be square and uniformly-sized");
@@ -87,3 +101,15 @@
 }
 
 @end
+
+#if TARGET_OS_OSX
+@implementation NSImage (Scale)
+
+- (CGFloat)scale { return 1.0; }
+
+- (CGImageRef)CGImage {
+    return [self CGImageForProposedRect:NULL context:NULL hints:nil];
+}
+
+@end
+#endif
