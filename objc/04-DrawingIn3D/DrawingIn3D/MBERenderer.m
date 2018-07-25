@@ -112,7 +112,7 @@ typedef struct
                                            options:MTLResourceOptionCPUCacheModeDefault];
     [_indexBuffer setLabel:@"Indices"];
 
-    _uniformBuffer = [self.device newBufferWithLength:sizeof(MBEUniforms) * MBEInFlightBufferCount
+    _uniformBuffer = [self.device newBufferWithLength:self.uniformSize * MBEInFlightBufferCount
                                               options:MTLResourceOptionCPUCacheModeDefault];
     [_uniformBuffer setLabel:@"Uniforms"];
 }
@@ -143,7 +143,7 @@ typedef struct
     MBEUniforms uniforms;
     uniforms.modelViewProjectionMatrix = matrix_multiply(projectionMatrix, matrix_multiply(viewMatrix, modelMatrix));
 
-    const NSUInteger uniformBufferOffset = sizeof(MBEUniforms) * self.bufferIndex;
+    const NSUInteger uniformBufferOffset = self.uniformSize * self.bufferIndex;
     memcpy([self.uniformBuffer contents] + uniformBufferOffset, &uniforms, sizeof(uniforms));
 }
 
@@ -165,10 +165,8 @@ typedef struct
     [renderPass setFrontFacingWinding:MTLWindingCounterClockwise];
     [renderPass setCullMode:MTLCullModeBack];
 
-    const NSUInteger uniformBufferOffset = sizeof(MBEUniforms) * self.bufferIndex;
-
     [renderPass setVertexBuffer:self.vertexBuffer offset:0 atIndex:0];
-    [renderPass setVertexBuffer:self.uniformBuffer offset:uniformBufferOffset atIndex:1];
+    [renderPass setVertexBuffer:self.uniformBuffer offset:self.uniformSize * self.bufferIndex atIndex:1];
 
     [renderPass drawIndexedPrimitives:MTLPrimitiveTypeTriangle
                            indexCount:[self.indexBuffer length] / sizeof(MBEIndex)
@@ -186,6 +184,17 @@ typedef struct
     }];
     
     [commandBuffer commit];
+}
+
+- (NSUInteger)uniformSize
+{
+    NSUInteger size = sizeof(MBEUniforms);
+#if TARGET_OS_MAC
+    if (size < 256) {
+        size = 256;
+    }
+#endif
+    return size;
 }
 
 @end
