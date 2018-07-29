@@ -1,13 +1,9 @@
 #import "MBEMetalView.h"
 
-@interface MBEMetalView ()
-@property (strong) id<CAMetalDrawable> currentDrawable;
-@property (assign) NSTimeInterval frameDuration;
-@property (strong) id<MTLTexture> depthTexture;
-@property (strong) CADisplayLink *displayLink;
-@end
-
 @implementation MBEMetalView
+
+@dynamic metalLayer;
+@dynamic drawableSize;
 
 + (Class)layerClass
 {
@@ -52,24 +48,7 @@
 - (void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
-    
-    // During the first layout pass, we will not be in a view hierarchy, so we guess our scale
-    CGFloat scale = [UIScreen mainScreen].scale;
-    
-    // If we've moved to a window by the time our frame is being set, we can take its scale as our own
-    if (self.window)
-    {
-        scale = self.window.screen.scale;
-    }
-    
-    CGSize drawableSize = self.bounds.size;
-    
-    // Since drawable size is in pixels, we need to multiply by the scale to move from points to pixels
-    drawableSize.width *= scale;
-    drawableSize.height *= scale;
-
-    self.metalLayer.drawableSize = drawableSize;
-
+    self.metalLayer.drawableSize = self.drawableSize;
     [self makeDepthTexture];
 }
 
@@ -81,37 +60,6 @@
 - (MTLPixelFormat)colorPixelFormat
 {
     return self.metalLayer.pixelFormat;
-}
-
-- (void)didMoveToWindow
-{
-    const NSTimeInterval idealFrameDuration = (1.0 / 60);
-    const NSTimeInterval targetFrameDuration = (1.0 / self.preferredFramesPerSecond);
-    const NSInteger frameInterval = round(targetFrameDuration / idealFrameDuration);
-
-    if (self.window)
-    {
-        [self.displayLink invalidate];
-        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkDidFire:)];
-        self.displayLink.frameInterval = frameInterval;
-        [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-    }
-    else
-    {
-        [self.displayLink invalidate];
-        self.displayLink = nil;
-    }
-}
-
-- (void)displayLinkDidFire:(CADisplayLink *)displayLink
-{
-    self.currentDrawable = [self.metalLayer nextDrawable];
-    self.frameDuration = displayLink.duration;
-
-    if ([self.delegate respondsToSelector:@selector(drawInView:)])
-    {
-        [self.delegate drawInView:self];
-    }
 }
 
 - (void)makeDepthTexture
@@ -126,6 +74,8 @@
                                                                                        height:drawableSize.height
                                                                                     mipmapped:NO];
         desc.usage = MTLTextureUsageRenderTarget;
+        desc.storageMode = MTLStorageModePrivate;
+        
         self.depthTexture = [self.metalLayer.device newTextureWithDescriptor:desc];
     }
 }
@@ -145,6 +95,16 @@
     passDescriptor.depthAttachment.storeAction = MTLStoreActionDontCare;
 
     return passDescriptor;
+}
+
+- (void)renderWithDuration:(NSTimeInterval)duration {
+    self.currentDrawable = [self.metalLayer nextDrawable];
+    self.frameDuration = duration;
+    
+    if ([self.delegate respondsToSelector:@selector(drawInView:)])
+    {
+        [self.delegate drawInView:self];
+    }
 }
 
 @end
