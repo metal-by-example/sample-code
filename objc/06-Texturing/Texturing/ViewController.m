@@ -33,8 +33,8 @@ static const CGFloat kMooDuration = 3;
     self.renderer = [MBERenderer new];
     self.metalView.delegate = self;
 
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self
-                                                                                 action:@selector(gestureDidRecognize:)];
+    NSUIPanGestureRecognizer *panGesture = [[NSUIPanGestureRecognizer alloc] initWithTarget:self
+                                                                                     action:@selector(gestureDidRecognize:)];
     [self.view addGestureRecognizer:panGesture];
 
     [self loadResources];
@@ -45,10 +45,9 @@ static const CGFloat kMooDuration = 3;
 }
 
 
-- (void)gestureDidRecognize:(UIGestureRecognizer *)gestureRecognizer
+- (void)gestureDidRecognize:(NSUIPanGestureRecognizer *)gestureRecognizer
 {
-    UIPanGestureRecognizer *panGestureRecognizer = (UIPanGestureRecognizer *)gestureRecognizer;
-    CGPoint velocity = [panGestureRecognizer velocityInView:self.view];
+    CGPoint velocity = [gestureRecognizer velocityInView:self.view];
     self.angularVelocity = CGPointMake(velocity.x * kVelocityScale, velocity.y * kVelocityScale);
 }
 

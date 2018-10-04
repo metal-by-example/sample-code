@@ -17,6 +17,17 @@
 		83E2D7B51BD598810006DDD8 /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7AC1BD598810006DDD8 /* MBERenderer.m */; };
 		83E2D7B61BD598810006DDD8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7AD1BD598810006DDD8 /* Shaders.metal */; };
 		83E2D7B81BD598810006DDD8 /* MBEMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7B11BD598810006DDD8 /* MBEMathUtilities.m */; };
+		845182E520D8214900BF473E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182E420D8214900BF473E /* AppDelegate.m */; };
+		845182EA20D8214A00BF473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845182E920D8214A00BF473E /* Assets.xcassets */; };
+		845182ED20D8214A00BF473E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845182EB20D8214A00BF473E /* Main.storyboard */; };
+		845182F020D8214A00BF473E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182EF20D8214A00BF473E /* main.m */; };
+		845182F720D821B300BF473E /* MBEMetalViewMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182F620D821B300BF473E /* MBEMetalViewMac.m */; };
+		845182F820D821DD00BF473E /* MBEMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7A71BD598810006DDD8 /* MBEMetalView.m */; };
+		845182FB20D8222100BF473E /* MBEMetalViewIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 845182FA20D8222100BF473E /* MBEMetalViewIOS.m */; };
+		8451830020D8278F00BF473E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7961BD597A30006DDD8 /* ViewController.m */; };
+		8451830120D827C800BF473E /* MBEMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7B11BD598810006DDD8 /* MBEMathUtilities.m */; };
+		8451830220D827C800BF473E /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7AC1BD598810006DDD8 /* MBERenderer.m */; };
+		8451830320D827DC00BF473E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 83E2D7AD1BD598810006DDD8 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +48,29 @@
 		83E2D7AD1BD598810006DDD8 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		83E2D7B01BD598810006DDD8 /* MBEMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEMathUtilities.h; sourceTree = "<group>"; };
 		83E2D7B11BD598810006DDD8 /* MBEMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEMathUtilities.m; sourceTree = "<group>"; };
+		845182E120D8214900BF473E /* Drawing in 3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drawing in 3D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		845182E320D8214900BF473E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		845182E420D8214900BF473E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		845182E920D8214A00BF473E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		845182EC20D8214A00BF473E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		845182EE20D8214A00BF473E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845182EF20D8214A00BF473E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		845182F120D8214A00BF473E /* DrawingIn3D_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrawingIn3D_Mac.entitlements; sourceTree = "<group>"; };
+		845182F520D821B300BF473E /* MBEMetalViewMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewMac.h; sourceTree = "<group>"; };
+		845182F620D821B300BF473E /* MBEMetalViewMac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewMac.m; sourceTree = "<group>"; };
+		845182F920D8222100BF473E /* MBEMetalViewIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEMetalViewIOS.h; sourceTree = "<group>"; };
+		845182FA20D8222100BF473E /* MBEMetalViewIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBEMetalViewIOS.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		83E2D7891BD597A30006DDD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845182DE20D8214900BF473E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				83E2D78E1BD597A30006DDD8 /* DrawingIn3D */,
+				845182E220D8214900BF473E /* DrawingIn3D-Mac */,
 				83E2D78D1BD597A30006DDD8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				83E2D78C1BD597A30006DDD8 /* DrawingIn3D.app */,
+				845182E120D8214900BF473E /* Drawing in 3D.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,20 +103,22 @@
 			children = (
 				83E2D7921BD597A30006DDD8 /* AppDelegate.h */,
 				83E2D7931BD597A30006DDD8 /* AppDelegate.m */,
-				83E2D7951BD597A30006DDD8 /* ViewController.h */,
-				83E2D7961BD597A30006DDD8 /* ViewController.m */,
+				83E2D79B1BD597A30006DDD8 /* Assets.xcassets */,
+				83E2D7A01BD597A30006DDD8 /* Info.plist */,
+				83E2D79D1BD597A30006DDD8 /* LaunchScreen.storyboard */,
+				83E2D7981BD597A30006DDD8 /* Main.storyboard */,
 				83E2D7B01BD598810006DDD8 /* MBEMathUtilities.h */,
 				83E2D7B11BD598810006DDD8 /* MBEMathUtilities.m */,
 				83E2D7A61BD598810006DDD8 /* MBEMetalView.h */,
 				83E2D7A71BD598810006DDD8 /* MBEMetalView.m */,
+				845182F920D8222100BF473E /* MBEMetalViewIOS.h */,
+				845182FA20D8222100BF473E /* MBEMetalViewIOS.m */,
 				83E2D7AB1BD598810006DDD8 /* MBERenderer.h */,
 				83E2D7AC1BD598810006DDD8 /* MBERenderer.m */,
 				83E2D7AD1BD598810006DDD8 /* Shaders.metal */,
-				83E2D7981BD597A30006DDD8 /* Main.storyboard */,
-				83E2D79B1BD597A30006DDD8 /* Assets.xcassets */,
-				83E2D79D1BD597A30006DDD8 /* LaunchScreen.storyboard */,
-				83E2D7A01BD597A30006DDD8 /* Info.plist */,
 				83E2D78F1BD597A30006DDD8 /* Supporting Files */,
+				83E2D7951BD597A30006DDD8 /* ViewController.h */,
+				83E2D7961BD597A30006DDD8 /* ViewController.m */,
 			);
 			path = DrawingIn3D;
 			sourceTree = "<group>";
@@ -95,6 +129,22 @@
 				83E2D7901BD597A30006DDD8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		845182E220D8214900BF473E /* DrawingIn3D-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				845182E320D8214900BF473E /* AppDelegate.h */,
+				845182E420D8214900BF473E /* AppDelegate.m */,
+				845182E920D8214A00BF473E /* Assets.xcassets */,
+				845182F120D8214A00BF473E /* DrawingIn3D_Mac.entitlements */,
+				845182EE20D8214A00BF473E /* Info.plist */,
+				845182EF20D8214A00BF473E /* main.m */,
+				845182EB20D8214A00BF473E /* Main.storyboard */,
+				845182F520D821B300BF473E /* MBEMetalViewMac.h */,
+				845182F620D821B300BF473E /* MBEMetalViewMac.m */,
+			);
+			path = "DrawingIn3D-Mac";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,17 +167,38 @@
 			productReference = 83E2D78C1BD597A30006DDD8 /* DrawingIn3D.app */;
 			productType = "com.apple.product-type.application";
 		};
+		845182E020D8214900BF473E /* DrawingIn3D-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845182F220D8214A00BF473E /* Build configuration list for PBXNativeTarget "DrawingIn3D-Mac" */;
+			buildPhases = (
+				845182DD20D8214900BF473E /* Sources */,
+				845182DE20D8214900BF473E /* Frameworks */,
+				845182DF20D8214900BF473E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DrawingIn3D-Mac";
+			productName = "DrawingIn3D-Mac";
+			productReference = 845182E120D8214900BF473E /* Drawing in 3D.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		83E2D7841BD597A30006DDD8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Metal by Example";
 				TargetAttributes = {
 					83E2D78B1BD597A30006DDD8 = {
 						CreatedOnToolsVersion = 7.0;
+					};
+					845182E020D8214900BF473E = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -145,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				83E2D78B1BD597A30006DDD8 /* DrawingIn3D */,
+				845182E020D8214900BF473E /* DrawingIn3D-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +232,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		845182DF20D8214900BF473E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845182EA20D8214A00BF473E /* Assets.xcassets in Resources */,
+				845182ED20D8214A00BF473E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -168,12 +249,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E2D7971BD597A30006DDD8 /* ViewController.m in Sources */,
+				845182FB20D8222100BF473E /* MBEMetalViewIOS.m in Sources */,
 				83E2D7B61BD598810006DDD8 /* Shaders.metal in Sources */,
 				83E2D7941BD597A30006DDD8 /* AppDelegate.m in Sources */,
 				83E2D7B51BD598810006DDD8 /* MBERenderer.m in Sources */,
 				83E2D7B81BD598810006DDD8 /* MBEMathUtilities.m in Sources */,
 				83E2D7911BD597A30006DDD8 /* main.m in Sources */,
 				83E2D7B21BD598810006DDD8 /* MBEMetalView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845182DD20D8214900BF473E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8451830320D827DC00BF473E /* Shaders.metal in Sources */,
+				8451830020D8278F00BF473E /* ViewController.m in Sources */,
+				8451830120D827C800BF473E /* MBEMathUtilities.m in Sources */,
+				845182F020D8214A00BF473E /* main.m in Sources */,
+				845182E520D8214900BF473E /* AppDelegate.m in Sources */,
+				8451830220D827C800BF473E /* MBERenderer.m in Sources */,
+				845182F820D821DD00BF473E /* MBEMetalView.m in Sources */,
+				845182F720D821B300BF473E /* MBEMetalViewMac.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +293,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		845182EB20D8214A00BF473E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845182EC20D8214A00BF473E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -211,12 +316,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -263,12 +370,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -321,6 +430,54 @@
 			};
 			name = Release;
 		};
+		845182F320D8214A00BF473E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "DrawingIn3D-Mac/DrawingIn3D_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "DrawingIn3D-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.DrawingIn3D-Mac";
+				PRODUCT_NAME = "Drawing in 3D";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		845182F420D8214A00BF473E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "DrawingIn3D-Mac/DrawingIn3D_Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "DrawingIn3D-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Metal-by-Example.DrawingIn3D-Mac";
+				PRODUCT_NAME = "Drawing in 3D";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -338,6 +495,15 @@
 			buildConfigurations = (
 				83E2D7A41BD597A30006DDD8 /* Debug */,
 				83E2D7A51BD597A30006DDD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845182F220D8214A00BF473E /* Build configuration list for PBXNativeTarget "DrawingIn3D-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845182F320D8214A00BF473E /* Debug */,
+				845182F420D8214A00BF473E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
