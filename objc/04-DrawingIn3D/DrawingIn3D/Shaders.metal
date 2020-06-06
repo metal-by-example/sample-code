@@ -14,8 +14,8 @@ struct Uniforms
 };
 
 
-vertex Vertex vertex_project(device Vertex *vertices [[buffer(0)]],
-                             constant Uniforms *uniforms [[buffer(1)]],
+vertex Vertex vertex_project(const device Vertex *vertices [[buffer(0)]],
+                             constant Uniforms *uniforms   [[buffer(1)]],
                              uint vid [[vertex_id]])
 {
     Vertex vertexOut;

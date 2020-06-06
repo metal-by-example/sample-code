@@ -6,7 +6,7 @@ struct Vertex
     float4 color;
 };
 
-vertex Vertex vertex_main(device Vertex *vertices [[buffer(0)]],
+vertex Vertex vertex_main(const device Vertex *vertices [[buffer(0)]],
                           uint vid [[vertex_id]])
 {
     return vertices[vid];
