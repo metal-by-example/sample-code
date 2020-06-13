@@ -18,8 +18,8 @@ struct ProjectedVertex
     float2 texCoords [[user(texcoords)]];
 };
 
-vertex ProjectedVertex vertex_main(device Vertex *vertices [[buffer(0)]],
-                                   constant Uniforms *uniforms [[buffer(1)]],
+vertex ProjectedVertex vertex_main(const device Vertex *vertices [[buffer(0)]],
+                                   constant Uniforms *uniforms   [[buffer(1)]],
                                    uint vertexID [[vertex_id]])
 {
     float4 position = vertices[vertexID].position;

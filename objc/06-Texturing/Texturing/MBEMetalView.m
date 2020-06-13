@@ -126,6 +126,7 @@
                                                                                        height:drawableSize.height
                                                                                     mipmapped:NO];
         desc.usage = MTLTextureUsageRenderTarget;
+        desc.storageMode = MTLStorageModePrivate;
         self.depthTexture = [self.metalLayer.device newTextureWithDescriptor:desc];
     }
 }

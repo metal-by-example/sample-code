@@ -10,6 +10,12 @@
 
 static const NSInteger MBEInFlightBufferCount = 3;
 
+static inline uint64_t AlignUp(uint64_t n, uint32_t alignment) {
+    return ((n + alignment - 1) / alignment) * alignment;
+}
+
+static const uint32_t MBEBufferAlignment = 256;
+
 @interface MBERenderer ()
 @property (strong) id<MTLDevice> device;
 @property (strong) MBEMesh *mesh;
@@ -73,7 +79,7 @@ static const NSInteger MBEInFlightBufferCount = 3;
     MBEOBJGroup *group = [model groupForName:@"teapot"];
     _mesh = [[MBEOBJMesh alloc] initWithGroup:group device:_device];
 
-    _uniformBuffer = [self.device newBufferWithLength:sizeof(MBEUniforms) * MBEInFlightBufferCount
+    _uniformBuffer = [self.device newBufferWithLength:AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) * MBEInFlightBufferCount
                                               options:MTLResourceOptionCPUCacheModeDefault];
     [_uniformBuffer setLabel:@"Uniforms"];
 }
@@ -106,7 +112,7 @@ static const NSInteger MBEInFlightBufferCount = 3;
     uniforms.modelViewProjectionMatrix = matrix_multiply(projectionMatrix, uniforms.modelViewMatrix);
     uniforms.normalMatrix = matrix_float4x4_extract_linear(uniforms.modelViewMatrix);
 
-    const NSUInteger uniformBufferOffset = sizeof(MBEUniforms) * self.bufferIndex;
+    const NSUInteger uniformBufferOffset = AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) * self.bufferIndex;
     memcpy([self.uniformBuffer contents] + uniformBufferOffset, &uniforms, sizeof(uniforms));
 }
 
@@ -128,7 +134,7 @@ static const NSInteger MBEInFlightBufferCount = 3;
     [renderPass setFrontFacingWinding:MTLWindingCounterClockwise];
     [renderPass setCullMode:MTLCullModeBack];
 
-    const NSUInteger uniformBufferOffset = sizeof(MBEUniforms) * self.bufferIndex;
+    const NSUInteger uniformBufferOffset = AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) * self.bufferIndex;
 
     [renderPass setVertexBuffer:self.mesh.vertexBuffer offset:0 atIndex:0];
     [renderPass setVertexBuffer:self.uniformBuffer offset:uniformBufferOffset atIndex:1];

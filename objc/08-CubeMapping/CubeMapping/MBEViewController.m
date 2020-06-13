@@ -74,12 +74,12 @@
         CMRotationMatrix m = motion.attitude.rotationMatrix;
         
         // permute rotation matrix from Core Motion to get scene orientation
-        vector_float4 X = { m.m12, m.m22, m.m32, 0 };
-        vector_float4 Y = { m.m13, m.m23, m.m33, 0 };
-        vector_float4 Z = { m.m11, m.m21, m.m31, 0 };
-        vector_float4 W = {     0,     0,     0, 1 };
+        simd_float4 X = { m.m12, m.m22, m.m32, 0 };
+        simd_float4 Y = { m.m13, m.m23, m.m33, 0 };
+        simd_float4 Z = { m.m11, m.m21, m.m31, 0 };
+        simd_float4 W = {     0,     0,     0, 1 };
         
-        matrix_float4x4 orientation = { X, Y, Z, W };
+        simd_float4x4 orientation = { X, Y, Z, W };
         self.renderer.sceneOrientation = orientation;
     }
 }

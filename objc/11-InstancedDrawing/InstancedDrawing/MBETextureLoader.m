@@ -28,7 +28,7 @@
     return rawData;
 }
 
-+ (id<MTLTexture>)texture2DWithImageNamed:(NSString *)imageName device:(id<MTLDevice>)device
++ (id<MTLTexture>)texture2DWithImageNamed:(NSString *)imageName device:(id<MTLDevice>)device commandQueue:(id<MTLCommandQueue>)commandQueue
 {
     UIImage *image = [UIImage imageNamed:imageName];
     CGSize imageSize = CGSizeMake(image.size.width * image.scale, image.size.height * image.scale);
@@ -39,13 +39,19 @@
     MTLTextureDescriptor *textureDescriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatRGBA8Unorm
                                                                                                  width:imageSize.width
                                                                                                 height:imageSize.height
-                                                                                             mipmapped:NO];
+                                                                                             mipmapped:YES];
     id<MTLTexture> texture = [device newTextureWithDescriptor:textureDescriptor];
     
     MTLRegion region = MTLRegionMake2D(0, 0, imageSize.width, imageSize.height);
     [texture replaceRegion:region mipmapLevel:0 withBytes:imageData bytesPerRow:bytesPerRow];
     
     free(imageData);
+    
+    id<MTLCommandBuffer> mipmapCommandBuffer = [commandQueue commandBuffer];
+    id<MTLBlitCommandEncoder> blitCommandEncoder = [mipmapCommandBuffer blitCommandEncoder];
+    [blitCommandEncoder generateMipmapsForTexture:texture];
+    [blitCommandEncoder endEncoding];
+    [mipmapCommandBuffer commit];
     
     return texture;
 }

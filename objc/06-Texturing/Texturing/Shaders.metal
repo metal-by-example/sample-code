@@ -42,8 +42,8 @@ struct ProjectedVertex
     float2 texCoords;
 };
 
-vertex ProjectedVertex vertex_project(device Vertex *vertices [[buffer(0)]],
-                                      constant Uniforms &uniforms [[buffer(1)]],
+vertex ProjectedVertex vertex_project(const device Vertex *vertices [[buffer(0)]],
+                                      constant Uniforms &uniforms   [[buffer(1)]],
                                       uint vid [[vertex_id]])
 {
     float4 position = vertices[vid].position;

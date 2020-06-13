@@ -47,7 +47,9 @@
     return texture;
 }
 
-+ (id<MTLTexture>)textureCubeWithImagesNamed:(NSArray *)imageNameArray device:(id<MTLDevice>)device
++ (id<MTLTexture>)textureCubeWithImagesNamed:(NSArray *)imageNameArray
+                                      device:(id<MTLDevice>)device
+                                commandQueue:(id<MTLCommandQueue>)commandQueue
 {
     NSAssert(imageNameArray.count == 6, @"Cube texture can only be created from exactly six images");
     
@@ -62,7 +64,7 @@
     
     MTLTextureDescriptor *textureDescriptor = [MTLTextureDescriptor textureCubeDescriptorWithPixelFormat:MTLPixelFormatRGBA8Unorm
                                                                                                     size:cubeSize
-                                                                                               mipmapped:NO];
+                                                                                               mipmapped:YES];
     
     id<MTLTexture> texture = [device newTextureWithDescriptor:textureDescriptor];
 
@@ -82,6 +84,12 @@
                  bytesPerImage:bytesPerImage];
         free(imageData);
     }
+    
+    id<MTLCommandBuffer> mipmapCommandBuffer = [commandQueue commandBuffer];
+    id<MTLBlitCommandEncoder> blitCommandEncoder = [mipmapCommandBuffer blitCommandEncoder];
+    [blitCommandEncoder generateMipmapsForTexture:texture];
+    [blitCommandEncoder endEncoding];
+    [mipmapCommandBuffer commit];
 
     return texture;
 }

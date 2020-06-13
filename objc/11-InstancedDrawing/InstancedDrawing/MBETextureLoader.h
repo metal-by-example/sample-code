@@ -3,6 +3,6 @@
 
 @interface MBETextureLoader : NSObject
 
-+ (id<MTLTexture>)texture2DWithImageNamed:(NSString *)imageName device:(id<MTLDevice>)device;
++ (id<MTLTexture>)texture2DWithImageNamed:(NSString *)imageName device:(id<MTLDevice>)device commandQueue:(id<MTLCommandQueue>)commandQueue;
 
 @end

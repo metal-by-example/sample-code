@@ -8,6 +8,10 @@
 #import "MBEPlaneMesh.h"
 #import "MBEMaterial.h"
 
+#define AlignUp(N, M) ((((N) + (M) - 1) / (M)) * (M))
+
+static const uint32_t MBEBufferAlignment = 256;
+
 static const float MBETerrainSize = 64;
 static const float MBETerrainHeight = 2.5;
 static const float MBETerrainSmoothness = 0.95;
@@ -18,9 +22,9 @@ static const size_t MBETreeCount = 200;
 static const float MBECameraHeight = 0.3;
 
 static const size_t MBESharedUniformOffset = 0;
-static const size_t MBETerrainUniformOffset = MBESharedUniformOffset + sizeof(Uniforms);
-static const size_t MBEWaterUniformOffset = MBETerrainUniformOffset + sizeof(InstanceUniforms);
-static const size_t MBETreeUniformOffset = MBEWaterUniformOffset + sizeof(InstanceUniforms);
+static const size_t MBETerrainUniformOffset = AlignUp(MBESharedUniformOffset + sizeof(Uniforms), MBEBufferAlignment);
+static const size_t MBEWaterUniformOffset = AlignUp(MBETerrainUniformOffset + sizeof(InstanceUniforms), MBEBufferAlignment);
+static const size_t MBETreeUniformOffset = AlignUp(MBEWaterUniformOffset + sizeof(InstanceUniforms), MBEBufferAlignment);
 
 @interface MBERenderer ()
 @property (nonatomic, strong) CAMetalLayer *layer;
@@ -204,6 +208,7 @@ static const size_t MBETreeUniformOffset = MBEWaterUniformOffset + sizeof(Instan
                                                                                          height:drawableSize.height
                                                                                       mipmapped:NO];
     descriptor.usage = MTLTextureUsageRenderTarget;
+    descriptor.storageMode = MTLStorageModePrivate;
     self.depthTexture = [self.device newTextureWithDescriptor:descriptor];
     [self.depthTexture setLabel:@"Depth Texture"];
 }

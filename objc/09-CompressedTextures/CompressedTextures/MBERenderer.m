@@ -4,7 +4,11 @@
 #import "MBEMathUtilities.h"
 #import "MBETextureDataSource.h"
 
-static const size_t MBEUniformBufferLength = 128;
+static inline size_t AlignUp(size_t n, uint32_t alignment) {
+    return ((n + alignment - 1) / alignment) * alignment;
+}
+
+static const size_t MBEBufferAlignment = 256;
 static const size_t MBEMaxInflightBufferCount = 3;
 
 @interface MBERenderer ()
@@ -109,7 +113,7 @@ static const size_t MBEMaxInflightBufferCount = 3;
     samplerDescriptor.tAddressMode = MTLSamplerAddressModeRepeat;
     _samplerState = [_device newSamplerStateWithDescriptor:samplerDescriptor];
 
-    _uniformBuffer = [_device newBufferWithLength:MBEMaxInflightBufferCount * MBEUniformBufferLength
+    _uniformBuffer = [_device newBufferWithLength:AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) * MBEMaxInflightBufferCount
                                           options:MTLResourceOptionCPUCacheModeDefault];
     [_uniformBuffer setLabel:@"Uniforms"];
 
@@ -147,7 +151,7 @@ static const size_t MBEMaxInflightBufferCount = 3;
 
 - (void)updateUniforms
 {
-    NSUInteger offset = self.inflightBufferIndex * MBEUniformBufferLength;
+    NSUInteger offset = self.inflightBufferIndex * AlignUp(sizeof(MBEUniforms), MBEBufferAlignment);
 
     // Build model-view-projection matrix
     CGSize drawableSize = [self.metalLayer drawableSize];
@@ -188,7 +192,7 @@ static const size_t MBEMaxInflightBufferCount = 3;
         id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
         id<MTLRenderCommandEncoder> commandEncoder = [commandBuffer renderCommandEncoderWithDescriptor:renderPass];
 
-        NSUInteger uniformOffset = self.inflightBufferIndex * MBEUniformBufferLength;
+        NSUInteger uniformOffset = self.inflightBufferIndex * AlignUp(sizeof(MBEUniforms), MBEBufferAlignment);
         [commandEncoder setCullMode:MTLCullModeNone];
         [commandEncoder setFrontFacingWinding:MTLWindingCounterClockwise];
         [commandEncoder setRenderPipelineState:self.renderPipeline];
@@ -202,7 +206,7 @@ static const size_t MBEMaxInflightBufferCount = 3;
         [commandEncoder endEncoding];
 
         [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> completedBuffer) {
-            dispatch_semaphore_signal(_inflightBufferSemaphore);
+            dispatch_semaphore_signal(self.inflightBufferSemaphore);
         }];
 
         [commandBuffer presentDrawable:drawable];

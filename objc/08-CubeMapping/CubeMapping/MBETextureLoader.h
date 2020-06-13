@@ -5,6 +5,7 @@
 
 + (id<MTLTexture>)texture2DWithImageNamed:(NSString *)imageName device:(id<MTLDevice>)device;
 
-+ (id<MTLTexture>)textureCubeWithImagesNamed:(NSArray *)imageNameArray device:(id<MTLDevice>)device;
-
++ (id<MTLTexture>)textureCubeWithImagesNamed:(NSArray *)imageNameArray
+                                      device:(id<MTLDevice>)device
+                                commandQueue:(id<MTLCommandQueue>)commandQueue;
 @end

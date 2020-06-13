@@ -114,8 +114,10 @@ static inline float random_unit_float()
     MTLSamplerDescriptor *samplerDescriptor = [MTLSamplerDescriptor new];
     samplerDescriptor.minFilter = MTLSamplerMinMagFilterNearest;
     samplerDescriptor.magFilter = MTLSamplerMinMagFilterLinear;
+    samplerDescriptor.mipFilter = MTLSamplerMipFilterLinear;
     samplerDescriptor.sAddressMode = MTLSamplerAddressModeRepeat;
     samplerDescriptor.tAddressMode = MTLSamplerAddressModeRepeat;
+    samplerDescriptor.maxAnisotropy = 8;
     _sampler = [_device newSamplerStateWithDescriptor:samplerDescriptor];
 }
 
@@ -158,10 +160,10 @@ static inline float random_unit_float()
 
 - (void)loadTextures
 {
-    _terrainTexture = [MBETextureLoader texture2DWithImageNamed:@"grass" device:_device];
+    _terrainTexture = [MBETextureLoader texture2DWithImageNamed:@"grass" device:_device commandQueue:_commandQueue];
     [_terrainTexture setLabel:@"Terrain Texture"];
     
-    _cowTexture = [MBETextureLoader texture2DWithImageNamed:@"spot" device:_device];
+    _cowTexture = [MBETextureLoader texture2DWithImageNamed:@"spot" device:_device commandQueue:_commandQueue];
     [_cowTexture setLabel:@"Cow Texture"];
 }
 
@@ -195,6 +197,7 @@ static inline float random_unit_float()
                                                                                          height:drawableSize.height
                                                                                       mipmapped:NO];
     descriptor.usage = MTLTextureUsageRenderTarget;
+    descriptor.storageMode = MTLStorageModePrivate;
     self.depthTexture = [self.device newTextureWithDescriptor:descriptor];
     [self.depthTexture setLabel:@"Depth Texture"];
 }

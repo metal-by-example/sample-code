@@ -57,7 +57,7 @@
         // calculate a point that lies on the curve
         float t0 = i * dt;
         float r0 = (2 + cosf(_q * t0)) * 0.5;
-        vector_float3 p0 = { r0 * cosf(_p * t0),
+        simd_float3 p0 = { r0 * cosf(_p * t0),
                              r0 * sinf(_p * t0),
                              -sinf(_q * t0) };
 
@@ -67,28 +67,28 @@
         float r1 = (2 + cosf(_q * t1)) * 0.5;
         
         // p1 is p0 advanced infinitesimally along the curve
-        vector_float3 p1 = { r1 * cosf(_p * t1),
+        simd_float3 p1 = { r1 * cosf(_p * t1),
                              r1 * sinf(_p * t1),
                              -sinf(_q * t1) };
         
         // compute approximate tangent as vector connecting p0 to p1
-        vector_float3 T = { p1.x - p0.x,
+        simd_float3 T = { p1.x - p0.x,
                             p1.y - p0.y,
                             p1.z - p0.z };
         
         // rough approximation of normal vector
-        vector_float3 N = { p1.x + p0.x,
+        simd_float3 N = { p1.x + p0.x,
                             p1.y + p0.y,
                             p1.z + p0.z };
         
         // compute binormal of curve
-        vector_float3 B = vector_cross(T, N);
+        simd_float3 B = simd_cross(T, N);
         
         // refine normal vector by Graham-Schmidt
-        N = vector_cross(B, T);
+        N = simd_cross(B, T);
 
-        B = vector_normalize(B);
-        N = vector_normalize(N);
+        B = simd_normalize(B);
+        N = simd_normalize(N);
 
         // generate points in a circle perpendicular to the curve at the current point
         for (size_t j = 0; j <= self.slices; ++j, ++vi)
@@ -99,7 +99,7 @@
             float x = _tubeRadius * cosf(u);
             float y = _tubeRadius * sinf(u);
             
-            vector_float3 p2 = { x * N.x + y * B.x,
+            simd_float3 p2 = { x * N.x + y * B.x,
                                  x * N.y + y * B.y,
                                  x * N.z + y * B.z };
 
@@ -109,7 +109,7 @@
             vertices[vi].position.w = 1;
             
             // compute normal of circle point
-            vector_float3 n2 = vector_normalize(p2);
+            simd_float3 n2 = simd_normalize(p2);
             
             vertices[vi].normal.x = n2.x;
             vertices[vi].normal.y = n2.y;

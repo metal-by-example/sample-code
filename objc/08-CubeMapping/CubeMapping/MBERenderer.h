@@ -9,7 +9,7 @@
 @property (nonatomic, strong) CAMetalLayer *layer;
 
 @property (nonatomic, assign) BOOL useRefractionMaterial;
-@property (nonatomic, assign) matrix_float4x4 sceneOrientation;
+@property (nonatomic, assign) simd_float4x4 sceneOrientation;
 
 - (instancetype)initWithLayer:(CAMetalLayer *)layer;
 - (void)draw;

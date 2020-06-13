@@ -21,6 +21,12 @@ typedef struct
     matrix_float4x4 modelViewProjectionMatrix;
 } MBEUniforms;
 
+static inline uint64_t AlignUp(uint64_t n, uint32_t alignment) {
+    return ((n + alignment - 1) / alignment) * alignment;
+}
+
+static const uint32_t MBEBufferAlignment = 256;
+
 @interface MBERenderer ()
 @property (strong) id<MTLDevice> device;
 @property (strong) id<MTLBuffer> vertexBuffer;
@@ -112,7 +118,7 @@ typedef struct
                                            options:MTLResourceOptionCPUCacheModeDefault];
     [_indexBuffer setLabel:@"Indices"];
 
-    _uniformBuffer = [self.device newBufferWithLength:sizeof(MBEUniforms) * MBEInFlightBufferCount
+    _uniformBuffer = [self.device newBufferWithLength:AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) * MBEInFlightBufferCount
                                               options:MTLResourceOptionCPUCacheModeDefault];
     [_uniformBuffer setLabel:@"Uniforms"];
 }
@@ -143,7 +149,7 @@ typedef struct
     MBEUniforms uniforms;
     uniforms.modelViewProjectionMatrix = matrix_multiply(projectionMatrix, matrix_multiply(viewMatrix, modelMatrix));
 
-    const NSUInteger uniformBufferOffset = sizeof(MBEUniforms) * self.bufferIndex;
+    const NSUInteger uniformBufferOffset = AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) * self.bufferIndex;
     memcpy([self.uniformBuffer contents] + uniformBufferOffset, &uniforms, sizeof(uniforms));
 }
 
@@ -165,7 +171,7 @@ typedef struct
     [renderPass setFrontFacingWinding:MTLWindingCounterClockwise];
     [renderPass setCullMode:MTLCullModeBack];
 
-    const NSUInteger uniformBufferOffset = sizeof(MBEUniforms) * self.bufferIndex;
+    const NSUInteger uniformBufferOffset = AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) * self.bufferIndex;
 
     [renderPass setVertexBuffer:self.vertexBuffer offset:0 atIndex:0];
     [renderPass setVertexBuffer:self.uniformBuffer offset:uniformBufferOffset atIndex:1];

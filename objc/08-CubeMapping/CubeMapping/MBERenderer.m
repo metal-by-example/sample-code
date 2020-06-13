@@ -5,6 +5,12 @@
 #import "MBETypes.h"
 #import "MBEMatrixUtilities.h"
 
+static inline uint64_t AlignUp(uint64_t n, uint32_t alignment) {
+    return ((n + alignment - 1) / alignment) * alignment;
+}
+
+static const uint32_t MBEBufferAlignment = 256;
+
 @interface MBERenderer ()
 @property (nonatomic, strong) id<MTLCommandQueue> commandQueue;
 @property (nonatomic, strong) id<MTLLibrary> library;
@@ -34,6 +40,8 @@
         
         _layer = layer;
         _layer.device = _device;
+        
+        _sceneOrientation = matrix_identity_float4x4;
     }
     return self;
 }
@@ -53,7 +61,7 @@
     vertexDescriptor.attributes[0].offset = 0;
     vertexDescriptor.attributes[0].format = MTLVertexFormatFloat4;
     
-    vertexDescriptor.attributes[1].offset = sizeof(vector_float4);
+    vertexDescriptor.attributes[1].offset = sizeof(simd_float4);
     vertexDescriptor.attributes[1].format = MTLVertexFormatFloat4;
     vertexDescriptor.attributes[1].bufferIndex = 0;
     
@@ -92,7 +100,9 @@
 - (void)buildResources
 {
     NSArray *imageNames = @[@"px", @"nx", @"py", @"ny", @"pz", @"nz"];
-    self.cubeTexture = [MBETextureLoader textureCubeWithImagesNamed:imageNames device:self.device];
+    self.cubeTexture = [MBETextureLoader textureCubeWithImagesNamed:imageNames
+                                                             device:self.device
+                                                       commandQueue:self.commandQueue];
 
     self.skybox = [[MBESkyboxMesh alloc] initWithDevice:self.device];
     
@@ -102,12 +112,13 @@
                                                    tubeSlices:32
                                                        device:self.device];
 
-    self.uniformBuffer = [self.device newBufferWithLength:sizeof(MBEUniforms) * 2
+    self.uniformBuffer = [self.device newBufferWithLength:AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) * 2
                                                   options:MTLResourceOptionCPUCacheModeDefault];
     
     MTLSamplerDescriptor *samplerDescriptor = [MTLSamplerDescriptor new];
     samplerDescriptor.minFilter = MTLSamplerMinMagFilterNearest;
     samplerDescriptor.magFilter = MTLSamplerMinMagFilterLinear;
+    samplerDescriptor.mipFilter = MTLSamplerMipFilterLinear;
     self.samplerState = [self.device newSamplerStateWithDescriptor:samplerDescriptor];
 }
 
@@ -119,6 +130,7 @@
                                                                                            height:drawableSize.height
                                                                                         mipmapped:NO];
     depthTexDesc.usage = MTLTextureUsageRenderTarget;
+    depthTexDesc.storageMode = MTLStorageModePrivate;
     self.depthTexture = [self.device newTextureWithDescriptor:depthTexDesc];
 }
 
@@ -154,8 +166,8 @@
     [commandEncoder setRenderPipelineState:self.useRefractionMaterial ? self.torusRefractPipeline : self.torusReflectPipeline];
     [commandEncoder setDepthStencilState:depthState];
     [commandEncoder setVertexBuffer:self.torus.vertexBuffer offset:0 atIndex:0];
-    [commandEncoder setVertexBuffer:self.uniformBuffer offset:sizeof(MBEUniforms) atIndex:1];
-    [commandEncoder setFragmentBuffer:self.uniformBuffer offset:sizeof(MBEUniforms) atIndex:0];
+    [commandEncoder setVertexBuffer:self.uniformBuffer offset:AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) atIndex:1];
+    [commandEncoder setFragmentBuffer:self.uniformBuffer offset:AlignUp(sizeof(MBEUniforms), MBEBufferAlignment) atIndex:0];
     [commandEncoder setFragmentTexture:self.cubeTexture atIndex:0];
     [commandEncoder setFragmentSamplerState:self.samplerState atIndex:0];
     
@@ -185,7 +197,7 @@
 
 - (void)updateUniforms
 {
-    static const vector_float4 cameraPosition = { 0, 0, -4, 1 };
+    static const simd_float4 cameraPosition = { 0, 0, -4, 1 };
 
     const CGSize size = self.layer.bounds.size;
     const CGFloat aspectRatio = size.width / size.height;
@@ -193,27 +205,27 @@
     static const CGFloat near = 0.1;
     static const CGFloat far = 100;
     
-    matrix_float4x4 projectionMatrix = perspective_projection(aspectRatio, verticalFOV * (M_PI / 180), near, far);
-    matrix_float4x4 modelMatrix = identity();
-    matrix_float4x4 skyboxViewMatrix = self.sceneOrientation;
-    matrix_float4x4 torusViewMatrix = matrix_multiply(translation(cameraPosition), self.sceneOrientation);
-    vector_float4 worldCameraPosition = matrix_multiply(matrix_invert(self.sceneOrientation), -cameraPosition);
+    simd_float4x4 projectionMatrix = perspective_projection(aspectRatio, verticalFOV * (M_PI / 180), near, far);
+    simd_float4x4 modelMatrix = identity();
+    simd_float4x4 skyboxViewMatrix = self.sceneOrientation;
+    simd_float4x4 torusViewMatrix = simd_mul(translation(cameraPosition), self.sceneOrientation);
+    simd_float4 worldCameraPosition = simd_mul(simd_inverse(self.sceneOrientation), -cameraPosition);
 
     MBEUniforms skyboxUniforms;
     skyboxUniforms.modelMatrix = modelMatrix;
     skyboxUniforms.projectionMatrix = projectionMatrix;
-    skyboxUniforms.normalMatrix = matrix_transpose(matrix_invert(skyboxUniforms.modelMatrix));
-    skyboxUniforms.modelViewProjectionMatrix = matrix_multiply(projectionMatrix, matrix_multiply(skyboxViewMatrix, modelMatrix));
+    skyboxUniforms.normalMatrix = simd_transpose(simd_inverse(skyboxUniforms.modelMatrix));
+    skyboxUniforms.modelViewProjectionMatrix = simd_mul(projectionMatrix, simd_mul(skyboxViewMatrix, modelMatrix));
     skyboxUniforms.worldCameraPosition = worldCameraPosition;
     memcpy(self.uniformBuffer.contents, &skyboxUniforms, sizeof(MBEUniforms));
 
     MBEUniforms torusUniforms;
     torusUniforms.modelMatrix = modelMatrix;
     torusUniforms.projectionMatrix = projectionMatrix;
-    torusUniforms.normalMatrix = matrix_transpose(matrix_invert(torusUniforms.modelMatrix));
-    torusUniforms.modelViewProjectionMatrix = matrix_multiply(projectionMatrix, matrix_multiply(torusViewMatrix, modelMatrix));
+    torusUniforms.normalMatrix = simd_transpose(simd_inverse(torusUniforms.modelMatrix));
+    torusUniforms.modelViewProjectionMatrix = simd_mul(projectionMatrix, simd_mul(torusViewMatrix, modelMatrix));
     torusUniforms.worldCameraPosition = worldCameraPosition;
-    memcpy(self.uniformBuffer.contents + sizeof(MBEUniforms), &torusUniforms, sizeof(MBEUniforms));
+    memcpy(self.uniformBuffer.contents + AlignUp(sizeof(MBEUniforms), MBEBufferAlignment), &torusUniforms, sizeof(MBEUniforms));
 }
 
 - (void)draw
